@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Company Profile</title>
+    <style>
+      /* CSS styles here */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Kajama Fire</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2>About Us</h2>
+      <p>
+        Kajama Fire adalah perusahaan inovatif di bidang teknologi kebakaran
+        yang berkomitmen untuk melindungi dan menyelamatkan nyawa serta aset
+        berharga. Sejak didirikan pada tahun 2005, kami telah menjadi pemimpin
+        industri dalam pengembangan solusi keamanan yang canggih dan efektif.
+      </p>
+    </section>
+
+    <section>
+      <h2>Our Services</h2>
+      <ul>
+        <li>Service 1</li>
+        <li>Service 2</li>
+        <li>Service 3</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <br />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <footer>&copy; 2023 Kajama Fire. All rights reserved.</footer>
+
+    <script>
+      // JavaScript code here
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get form data
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          // Perform form validation (e.g., check for empty fields, valid email format, etc.)
+          if (
+            name.trim() === "" ||
+            email.trim() === "" ||
+            message.trim() === ""
+          ) {
+            alert("Please fill in all fields");
+            return;
+          }
+
+          // Process form data (e.g., send it to a server for further processing)
+          // Example: Display form data in console
+          console.log("Name:", name);
+          console.log("Email:", email);
+          console.log("Message:", message);
+
+          // Optionally, display a success message to the user
+          alert(
+            "Thank you for contacting Kajama Fire. We will get back to you soon."
+          );
+
+          // Reset form fields
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+        });
+    </script>
+  </body>
+</html>
