@@ -25,14 +25,17 @@
         /* min-height: 2000px; */
       }
       .info {
+        font-size: 10px;
         position: fixed;
         top: 10px;
         right: 10px;
-        margin: 0 1rem;
+        margin: 1rem 6.5rem 2rem;
       }
       .info a {
         color: #fff;
         text-decoration: none;
+        padding-right: 10px;
+        padding-left: 15px;
       }
       .navbar {
         display: flex;
@@ -91,6 +94,66 @@
       .navbar .navbar-extra a:hover {
         color: var(--primary);
       }
+
+      .mainhome {
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        align-items: center;
+        /* background-image: url("asset/bg-fire2.jpg"); */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .mainhome .content {
+        color: black;
+        margin: 100px 0 0 0;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        border-radius: 5%;
+        text-align: center;
+        text-decoration: none;
+        font-size: small;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #000;
+        color: #fff;
+      }
+      .content {
+        display: flex;
+        height: 100vh;
+      }
+      .leftside {
+        flex: 1;
+        border-right: 1px solid black;
+      }
+      .rightside {
+        flex: 1;
+      }
+      .product {
+        display: grid;
+      }
+      .product h1 {
+        text-align: center;
+        color: #000;
+      }
+      .product h1 span {
+        color: var(--primary);
+      }
+      /* .content .rightside {
+        border-left: 1px solid black;
+      } */
+      @media (max-width: 1330px) {
+        .info {
+          margin: 0 0 2rem;
+        }
+      }
     </style>
     <script
       src="https://kit.fontawesome.com/ff4f981f32.js"
@@ -106,7 +169,10 @@
       <div class="info">
         <a
           href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
-          ><i class="fa-solid fa-phone"></i>+62 sekian</a
+          ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+        </a>
+        <a href="mailto:info@kajama.net"
+          ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
         >
       </div>
       <div class="navbar-nav">
@@ -124,17 +190,40 @@
     <!-- NAVBAR End-->
 
     <!-- Main Section Start -->
-    <!-- <section class="hero" id="home">
-      <main class="content">
-        <h1>Mari Nikmati Masakan <span>Rumahan Enak</span></h1>
-        <p>
-          Silakan jelajahi website kami dan temukan menu favorit Anda. Jangan
-          ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau
-          permintaan khusus. Kami siap membantu Anda dengan sepenuh hati.
-        </p>
-        <a href="#" class="cta">Beli Sekarang</a>
-      </main>
-    </section> -->
+    <section class="mainhome" id="home">
+      <div class="content">
+        <div class="leftside">
+          <h1>WELCOME TO <span style="color: var(--primary)">KAJAMA</span></h1>
+          <p style="display: flex; font-size: small; padding-top: 1px">
+            PT. KARYA JAYA MANDIRI MEGAH PRAKOSO adalah Perusahaan yang bergerak
+            di bidang industri Khusus Karoseri Mobil Pemadam Kebakaran yang
+            didistribusikan untuk memenuhi kebutuhan Pemerintah Daerah,
+            Pemerintah Propinsi, Kementerian, BUMN , OIL Company, pelanggan
+            korporasi,Building Managemen , Manufacturing Company , General
+            Contractor dll.
+          </p>
+          <p style="display: flex; font-size: small">
+            Fokus kami adalah memberikan Layanan Penyediaan : Fire Truck, Fire
+            Ladder, Airport Fire Fighting and Rescue dengan di dukung Fire Pump
+            Merk. Morita yang merupakan brand ternama dari produsen terkemuka di
+            dunia, produk yang kami distribusikan telah melalui proses uji
+            pabrik dan dilengkapi sertifikat resmi serta bergaransi.
+          </p>
+          <button class="btn" type="button" onclick="readmore()">
+            Read More
+          </button>
+          <script>
+            function readmore() {
+              window.location.href = "Company-Profil.html";
+            }
+          </script>
+        </div>
+        <div class="rightside"></div>
+      </div>
+      <div class="product">
+        <h1>PRODUCT <span>KAJAMA</span></h1>
+      </div>
+    </section>
     <!-- Main Section End -->
 
     <!-- About Section Start -->
