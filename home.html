@@ -136,7 +136,8 @@
         text-align: center;
         color: #000;
       }
-      .product h1 span {
+      .product h1 span,
+      .rightside h1 span {
         color: var(--primary);
       }
       .menu a:hover,
@@ -155,11 +156,10 @@
       .social a:hover {
         color: red;
       }
-
-      /* Slider */
+      /* slide chasis */
       .swiper {
-        width: 100%;
-        height: 100%;
+        width: 40%;
+        height: 40%;
       }
 
       .swiper-slide {
@@ -169,13 +169,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 1px solid #000;
+        background-color: #000;
       }
 
       .swiper-slide img {
         display: block;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
         object-fit: cover;
+      }
+      .casis h2 {
+        color: #000;
+        text-align: center;
+      }
+      .casis span {
+        color: var(--primary);
       }
       @media (max-width: 1330px) {
         .info {
@@ -242,19 +251,17 @@
           </script>
         </div>
         <div class="rightside">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
+          <h1>PRODUCT <span>KAJAMA FIRE</span></h1>
+          <div class="swiper-slide">
+            <div class="card">
+              <img src="asset/ISO/iso3.webp" alt="" />
+              <img src="asset/ISO/iso4.webp" alt="" />
+              <img src="asset/ISO/iso5.webp" alt="" />
+              <img src="asset/ISO/iso6.webp" alt="" />
+              <img src="asset/ISO/iso9.webp" alt="" />
+              <img src="asset/ISO/iso10.webp" alt="" />
+              <img src="asset/ISO/iso13.webp" alt="" />
             </div>
-            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -270,7 +277,39 @@
     </section>
 
     <section class="casis">
-      <div class="merek"></div>
+      <h2>CHASSIS OPTION <span>BY</span></h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="asset/Chassis/fuso.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="asset/Chassis/hino.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="asset/Chassis/isuzu.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="asset/Chassis/iveco.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="asset/Chassis/man.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="asset/Chassis/merci.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="asset/Chassis/Scania.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="asset/Chassis/toyota.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="asset/Chassis/volvo.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
     <!-- FOOTER -->
     <footer>
@@ -369,6 +408,8 @@
     <script>
       feather.replace();
     </script>
+    <!-- main js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 3,
@@ -379,7 +420,5 @@
         },
       });
     </script>
-    <!-- main js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>
