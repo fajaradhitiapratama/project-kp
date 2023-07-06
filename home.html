@@ -57,13 +57,6 @@
         font-size: 1.3rem;
         margin: 0 1rem;
       }
-      /* .navbar-logo {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #ffffff;
-        font-style: italic;
-      } */
-
       .navbar .navbar-logo span {
         color: var(--primary);
       }
@@ -146,9 +139,22 @@
       .product h1 span {
         color: var(--primary);
       }
-      /* .content .rightside {
-        border-left: 1px solid black;
-      } */
+      .menu a:hover,
+      .linkcepat a:hover {
+        font-weight: bold;
+      }
+
+      .social a {
+        display: inline-block;
+        margin: 1px;
+        color: black;
+      }
+      .social a i {
+        font-size: 16px;
+      }
+      .social a:hover {
+        color: red;
+      }
       @media (max-width: 1330px) {
         .info {
           margin: 0 0 2rem;
@@ -161,7 +167,7 @@
     <!-- NAVBAR Start-->
     <nav class="navbar">
       <a href="home.html"
-        ><img src="asset/kajama-logo.webp" alt="kajama-logo"
+        ><img src="asset/logo/kajama-logo.webp" alt="kajama-logo"
       /></a>
       <div class="info">
         <a
@@ -185,7 +191,7 @@
     <!-- NAVBAR End-->
 
     <!-- Main Section Start -->
-    <section class="mainhome" id="home">
+    <section class="mainhome" id="home" style="margin: 3%">
       <div class="content">
         <div class="leftside">
           <h1>WELCOME TO <span style="color: var(--primary)">KAJAMA</span></h1>
@@ -227,34 +233,99 @@
     <section class="casis">
       <div class="merek"></div>
     </section>
-
+    <!-- FOOTER -->
     <footer>
-      <div class="address" style="color: #000">
-        <h2>Adress</h2>
-        <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI MEGAH
-        PRAKOSO<br />Griya Bukit Jaya Blok O.4/44, Gunung Putri,Bogor
-        <br />
-        <i class="fa-regular fa-envelope"></i> info@kajama.net <br />
-        <i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+      <div
+        class="container-footer"
+        style="
+          color: #000;
+          border-top: 1px solid #000;
+          margin: 3%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 100px;
+        "
+      >
+        <div class="address" style="color: #000; text-align: center">
+          <h2>ADDRESS</h2>
+          <div style="font-size: small">
+            <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI
+            MEGAH PRAKOSO<br />Griya Bukit Jaya Blok O.4/44, Gunung Putri,Bogor
+            <br />
+            <i class="fa-regular fa-envelope"></i> info@kajama.net <br />
+            <i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: #000">KAJAMA FIRE</h2>
+          <div class="menu" style="font-size: small">
+            <a href="home.html" style="text-decoration: none; color: #000"
+              >Home</a
+            ><br />
+            <a
+              href="Company-Profil.html"
+              style="text-decoration: none; color: #000"
+              >About Us</a
+            >
+            <br />
+            <a
+              href="Company-Profil.html"
+              style="text-decoration: none; color: #000"
+              >Product</a
+            >
+            <br />
+            <a href="Quality.html" style="text-decoration: none; color: #000"
+              >Quality</a
+            ><br />
+            <a href="Equipment.html" style="text-decoration: none; color: #000"
+              >Equipment</a
+            ><br />
+            <a href="Video.html" style="text-decoration: none; color: #000"
+              >Video</a
+            ><br />
+            <a href="Contact-Us.html" style="text-decoration: none; color: #000"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: #000">QUICK LINK</h2>
+          <div class="linkcepat" style="font-size: small">
+            <a href="Quality.html" style="text-decoration: none; color: #000"
+              >Quality Product</a
+            ><br />
+            <a href="Video.html" style="text-decoration: none; color: #000"
+              >Video</a
+            >
+            <br />
+            <a href="sertifikat.html" style="text-decoration: none; color: #000"
+              >Sertifikat</a
+            >
+            <br />
+          </div>
+        </div>
+        <div class="established" style="text-align: center">
+          <h2 style="color: #000">ESTABLISHED</h2>
+          <img src="asset/ISO/iso2.webp" alt="" />
+          <img src="asset/ISO/iso8.webp" alt="" />
+          <img src="asset/ISO/iso11.webp" alt="" /><br />
+          <img src="asset/logo/kajama-morita.webp" alt="" />
+        </div>
       </div>
-      <div class="menu">
-        <h2 style="color: #000">KAJAMA FIRE</h2>
-        <a href="home.html">Home</a><br />
-        <a href="Company-Profil.html">About Us</a> <br />
-        <a href="Company-Profil.html">Product</a> <br />
-        <a href="Quality.html">Quality</a><br />
-        <a href="Equipment.html">Equipment</a><br />
-        <a href="Video.html">Video</a><br />
-        <a href="Contact-Us.html">Contact Us</a>
+      <div class="social" style="text-align: center">
+        <a href="https://www.facebook.com/paijo.doang.39"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.youtube.com/channel/UCuY7S43GxzswhTMe0_DalZA"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://www.instagram.com/cucukdokterpemadam/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/cucuk-kajama-026b32146/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
       </div>
-      <div class="quicklink">
-        <h2 style="color: #000">Quick Link</h2>
-        <a href="Quality.html">Quality Product</a><br />
-        <a href="Video.html">Video</a> <br />
-        <a href="sertifikat.html">Sertifikat</a> <br />
-      </div>
-      <div class="established"></div>
-      <div class="social"></div>
     </footer>
     <script>
       feather.replace();
