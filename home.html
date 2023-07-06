@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <style>
       :root {
         --primary: #ff0000;
@@ -90,17 +94,13 @@
 
       .mainhome {
         background-color: rgb(255, 255, 255);
-        display: grid;
-        align-items: center;
-        /* background-image: url("asset/bg-fire2.jpg"); */
-        background-size: cover;
-        background-position: center;
-        position: relative;
+        display: flex;
       }
 
       .mainhome .content {
         color: black;
         margin: 100px 0 0 0;
+        margin-bottom: 0;
       }
       .btn {
         display: inline-block;
@@ -120,11 +120,11 @@
       }
       .content {
         display: flex;
-        height: 100vh;
+        justify-content: space-between;
+        align-items: flex-start;
       }
       .leftside {
         flex: 1;
-        border-right: 1px solid black;
       }
       .rightside {
         flex: 1;
@@ -150,10 +150,32 @@
         color: black;
       }
       .social a i {
-        font-size: 16px;
+        font-size: 24px;
       }
       .social a:hover {
         color: red;
+      }
+
+      /* Slider */
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       @media (max-width: 1330px) {
         .info {
@@ -191,7 +213,7 @@
     <!-- NAVBAR End-->
 
     <!-- Main Section Start -->
-    <section class="mainhome" id="home" style="margin: 3%">
+    <section class="mainhome" style="margin: 3%">
       <div class="content">
         <div class="leftside">
           <h1>WELCOME TO <span style="color: var(--primary)">KAJAMA</span></h1>
@@ -219,8 +241,25 @@
             }
           </script>
         </div>
-        <div class="rightside"></div>
+        <div class="rightside">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+              <div class="swiper-slide">Slide 5</div>
+              <div class="swiper-slide">Slide 6</div>
+              <div class="swiper-slide">Slide 7</div>
+              <div class="swiper-slide">Slide 8</div>
+              <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </div>
+    </section>
+    <section>
       <div class="product">
         <h1>PRODUCT <span>KAJAMA</span></h1>
       </div>
@@ -330,8 +369,17 @@
     <script>
       feather.replace();
     </script>
-
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
     <!-- main js -->
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>
