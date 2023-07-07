@@ -31,11 +31,12 @@
       }
 
       .swiper {
-        width: 50%;
-        height: 50%;
+        width: 30%;
+        height: 30%;
       }
 
       .swiper-slide {
+        flex: 1;
         text-align: right;
         font-size: 18px;
         background: #fff;
@@ -50,12 +51,16 @@
         height: 100%;
         object-fit: cover;
       }
+
+      .aside {
+        flex: 0 0 300px;
+      }
     </style>
   </head>
 
   <body>
     <!-- Swiper -->
-    <div class="swiper mySwiper">
+    <aside class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="asset/ISO/iso3.webp" alt="" /></div>
         <div class="swiper-slide"><img src="asset/ISO/iso3.webp" alt="" /></div>
@@ -68,7 +73,7 @@
         <div class="swiper-slide"><img src="asset/ISO/iso3.webp" alt="" /></div>
       </div>
       <div class="swiper-pagination"></div>
-    </div>
+    </aside>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

@@ -187,6 +187,14 @@
       .casis span {
         color: var(--primary);
       }
+      /* slider sertif */
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        font-size: 1px;
+        color: #ff0000;
+      }
       @media (max-width: 1330px) {
         .info {
           margin: 0 0 2rem;
@@ -252,7 +260,7 @@
           </script>
         </div>
         <div class="rightside">
-          <h1>PRODUCT <span>KAJAMA FIRE</span></h1>
+          <h1>CERTIFICATE <span>KAJAMA FIRE</span></h1>
           <div class="certif">
             <div class="card">
               <img src="asset/ISO/iso3.webp" alt="" />
@@ -275,7 +283,7 @@
     <section class="marketing">
       <div class="teammarketing">
         <h2>CHASSIS OPTION <span>BY</span></h2>
-        <div class="swiper mySwiper">
+        <!-- <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="asset/Chassis/fuso.png" alt="" />
@@ -306,7 +314,7 @@
             </div>
           </div>
           <div class="swiper-pagination"></div>
-        </div>
+        </div> -->
       </div>
       <div class="quality"></div>
     </section>
@@ -447,8 +455,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 5,
         spaceBetween: 30,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
