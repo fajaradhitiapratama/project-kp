@@ -1,100 +1,439 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Company Profile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kajama Fire</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <style>
-      /* CSS styles here */
+      :root {
+        --primary: #ff0000;
+        --bg: #ffffff;
+        --bgnav: #838383;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--bg);
+        color: #fff;
+        /* min-height: 2000px; */
+      }
+      .info {
+        font-size: 10px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        margin: 1rem 6.5rem 2rem;
+      }
+      .info a {
+        color: #fff;
+        text-decoration: none;
+        padding-right: 10px;
+        padding-left: 15px;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4rem 7%;
+        background-color: rgba(0, 0, 0, 1);
+        border-bottom: 7px solid var(--primary);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+      }
+      .navbar .navbar-nav a {
+        text-decoration: none;
+        color: #ffffff;
+        display: inline-block;
+        font-size: 1.3rem;
+        margin: 0 1rem;
+      }
+      .navbar .navbar-logo span {
+        color: var(--primary);
+      }
+
+      .navbar,
+      .navbar-nav a:hover {
+        color: var(--primary);
+      }
+
+      .navbar .navbar-nav a::after {
+        content: "";
+        display: block;
+        padding-bottom: 0.1rem;
+        border-bottom: 0.1rem solid var(--primary);
+        transform: scaleX(0);
+        transition: 0.2s linear;
+      }
+
+      .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.5);
+      }
+
+      .navbar .navbar-extra a {
+        color: #fff;
+        margin: 0 0.5rem;
+      }
+
+      .navbar .navbar-extra a:hover {
+        color: var(--primary);
+      }
+
+      .mainhome {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+      }
+
+      .mainhome .content {
+        color: black;
+        margin: 150px 0 0 0;
+        margin-bottom: 0;
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        border-radius: 5%;
+        text-align: center;
+        text-decoration: none;
+        font-size: small;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #000;
+        color: #fff;
+      }
+      .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .leftside {
+        flex: 1;
+      }
+      .rightside {
+        flex: 1;
+      }
+      .product {
+        display: grid;
+      }
+      .product h1 {
+        text-align: center;
+        color: #000;
+      }
+      .product h1 span {
+        color: var(--primary);
+      }
+      .menu a:hover,
+      .linkcepat a:hover {
+        font-weight: bold;
+      }
+
+      .social a {
+        display: inline-block;
+        margin: 1px;
+        color: black;
+      }
+      .social a i {
+        font-size: 24px;
+      }
+      .social a:hover {
+        color: red;
+      }
+
+      /* Slider */
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      .form-container {
+        width: 50%;
+        margin: auto;
+        padding: 2%;
+        border: 1px solid #f7f7f7;
+      }
+      label {
+        display: block;
+        margin-top: 25px;
+        font-size: 1rem;
+      }
+      input,
+      textarea {
+        width: 80%;
+        padding: 15px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+      }
+      button {
+        width: 82.5%;
+        height: 50px;
+        border-radius: 5px;
+        color: #fff;
+        background: red;
+        line-height: 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        border: 1px solid red;
+        margin-top: 25px;
+        transition: color 0.4s ease-out, background 0.4s ease-out;
+      }
+      button:hover {
+        color: red;
+        background: #fff;
+      }
+      .errors {
+        display: block;
+        color: red;
+        margin-top: 5px;
+      }
+      .error {
+        -webkit-transition: 0.2s;
+        -moz-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
+        box-shadow: 0 0 15px 0 rgba(255, 36, 0, 1);
+      }
+      @media (max-width: 1330px) {
+        .info {
+          margin: 0 0 2rem;
+        }
+      }
     </style>
+    <script src="https://kit.fontawesome.com/ff4f981f32.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Kajama Fire</h1>
-    </header>
-
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <!-- NAVBAR Start-->
+    <nav class="navbar">
+      <a href="home.html"
+        ><img src="asset/logo/kajama-logo.webp" alt="kajama-logo"
+      /></a>
+      <div class="info">
+        <a
+          href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+          ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+        </a>
+        <a href="mailto:info@kajama.net"
+          ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
+        >
+      </div>
+      <div class="navbar-nav">
+        <a href="home.html">Home</a>
+        <a href="Company-Profil.html">About Us</a>
+        <a href="Company-Profil.html">Product</a>
+        <a href="Quality.html">Quality</a>
+        <a href="Equipment.html">Equipment</a>
+        <a href="Video.html">Video</a>
+        <a href="Contact-Us.html">Contact Us</a>
+      </div>
     </nav>
+    <!-- NAVBAR End-->
 
-    <section>
-      <h2>About Us</h2>
-      <p>
-        Kajama Fire adalah perusahaan inovatif di bidang teknologi kebakaran
-        yang berkomitmen untuk melindungi dan menyelamatkan nyawa serta aset
-        berharga. Sejak didirikan pada tahun 2005, kami telah menjadi pemimpin
-        industri dalam pengembangan solusi keamanan yang canggih dan efektif.
-      </p>
+    <!-- Main Section Start -->
+    <section class="mainhome" style="margin: 3%">
+      <div class="content">
+        <div class="leftside">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6181451464718!2d106.89887137464355!3d-6.443052993548237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eab771dcf6e7%3A0x2da5ad3ac56902cb!2sFire%20Truck%20Kajama%20PT!5e0!3m2!1sid!2sid!4v1688701023226!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="rightside">
+          <div class="form-container">
+            <form
+              name="contactForm"
+              method="post"
+              onsubmit="return validate()"
+              action="#"
+            >
+              <label for="name">* Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+              />
+              <span class="errors"></span>
+
+              <label for="email">* Email</label>
+              <input
+                type="text"
+                placeholder="Email address"
+                id="email"
+                name="email"
+              />
+              <span class="errors"></span>
+
+              <label for="phone">* Phone</label>
+              <input
+                type="text"
+                placeholder="Phone number"
+                id="phone"
+                name="phone"
+              />
+              <span class="errors"></span>
+
+              <label for="subject">* Message</label>
+              <textarea
+                placeholder="Your message"
+                cols="132"
+                rows="5"
+                name="subject"
+                id="subject"
+              ></textarea>
+              <span class="errors"></span>
+
+              <button type="submit" value="Submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <section>
-      <h2>Our Services</h2>
-      <ul>
-        <li>Service 1</li>
-        <li>Service 2</li>
-        <li>Service 3</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact Us</h2>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <br />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <br />
-        <input type="submit" value="Submit" />
-      </form>
-    </section>
-
-    <footer>&copy; 2023 Kajama Fire. All rights reserved.</footer>
-
+    <!-- FOOTER -->
+    <footer>
+      <div
+        class="container-footer"
+        style="
+          color: #000;
+          border-top: 1px solid #000;
+          margin: 3%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 100px;
+        "
+      >
+        <div class="address" style="color: #000; text-align: center">
+          <h2>ADDRESS</h2>
+          <div style="font-size: small">
+            <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI
+            MEGAH PRAKOSO<br />Griya Bukit Jaya Blok O.4/44, Gunung Putri,Bogor
+            <br />
+            <i class="fa-regular fa-envelope"></i> info@kajama.net <br />
+            <i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: #000">KAJAMA FIRE</h2>
+          <div class="menu" style="font-size: small">
+            <a href="home.html" style="text-decoration: none; color: #000"
+              >Home</a
+            ><br />
+            <a
+              href="Company-Profil.html"
+              style="text-decoration: none; color: #000"
+              >About Us</a
+            >
+            <br />
+            <a href="Product.html" style="text-decoration: none; color: #000"
+              >Product</a
+            >
+            <br />
+            <a href="Quality.html" style="text-decoration: none; color: #000"
+              >Quality</a
+            ><br />
+            <a href="Equipment.html" style="text-decoration: none; color: #000"
+              >Equipment</a
+            ><br />
+            <a href="Video.html" style="text-decoration: none; color: #000"
+              >Video</a
+            ><br />
+            <a href="Contact-Us.html" style="text-decoration: none; color: #000"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: #000">QUICK LINK</h2>
+          <div class="linkcepat" style="font-size: small">
+            <a href="Quality.html" style="text-decoration: none; color: #000"
+              >Quality Product</a
+            ><br />
+            <a href="Video.html" style="text-decoration: none; color: #000"
+              >Video</a
+            >
+            <br />
+            <a href="sertifikat.html" style="text-decoration: none; color: #000"
+              >Sertifikat</a
+            >
+            <br />
+          </div>
+        </div>
+        <div class="established" style="text-align: center">
+          <h2 style="color: #000">ESTABLISHED</h2>
+          <img src="asset/ISO/iso2.webp" alt="" />
+          <img src="asset/ISO/iso8.webp" alt="" />
+          <img src="asset/ISO/iso11.webp" alt="" /><br />
+          <img src="asset/logo/kajama-morita.webp" alt="" />
+        </div>
+      </div>
+      <div class="social" style="text-align: center">
+        <a href="https://www.facebook.com/paijo.doang.39"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.youtube.com/channel/UCuY7S43GxzswhTMe0_DalZA"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://www.instagram.com/cucukdokterpemadam/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/cucuk-kajama-026b32146/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
     <script>
-      // JavaScript code here
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent form submission
-
-          // Get form data
-          var name = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-          var message = document.getElementById("message").value;
-
-          // Perform form validation (e.g., check for empty fields, valid email format, etc.)
-          if (
-            name.trim() === "" ||
-            email.trim() === "" ||
-            message.trim() === ""
-          ) {
-            alert("Please fill in all fields");
-            return;
-          }
-
-          // Process form data (e.g., send it to a server for further processing)
-          // Example: Display form data in console
-          console.log("Name:", name);
-          console.log("Email:", email);
-          console.log("Message:", message);
-
-          // Optionally, display a success message to the user
-          alert(
-            "Thank you for contacting Kajama Fire. We will get back to you soon."
-          );
-
-          // Reset form fields
-          document.getElementById("name").value = "";
-          document.getElementById("email").value = "";
-          document.getElementById("message").value = "";
-        });
+      feather.replace();
     </script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <!-- main js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>
