@@ -95,6 +95,8 @@
       .mainhome {
         background-color: rgb(255, 255, 255);
         display: flex;
+        border-bottom: 2px solid black;
+        padding-bottom: 8px;
       }
 
       .mainhome .content {
@@ -125,9 +127,12 @@
       }
       .leftside {
         flex: 1;
+        text-align: center;
+        padding-right: 50px;
       }
       .rightside {
         flex: 1;
+        text-align: center;
       }
       .product {
         display: grid;
@@ -188,8 +193,18 @@
         color: var(--primary);
       }
       /* card sertif */
-      .rightside .certif .card img {
-        box-shadow: 15px 15px 50px black;
+      .card {
+        display: inline-block;
+        transition: 1s;
+      }
+      .card img {
+        box-shadow: 5px 5px 10px black;
+        position: relative;
+        border-radius: 5px;
+      }
+      .card:hover {
+        transform: scale(1.1);
+        z-index: 2;
       }
       @media (max-width: 1330px) {
         .info {
@@ -231,15 +246,22 @@
       <div class="content">
         <div class="leftside">
           <h1>WELCOME TO <span style="color: var(--primary)">KAJAMA</span></h1>
-          <p style="display: flex; font-size: small; padding-top: 1px">
+          <p
+            style="
+              display: flex;
+              font-size: small;
+              padding-top: 1px;
+              text-align: justify;
+            "
+          >
             PT. KARYA JAYA MANDIRI MEGAH PRAKOSO adalah Perusahaan yang bergerak
             di bidang industri Khusus Karoseri Mobil Pemadam Kebakaran yang
             didistribusikan untuk memenuhi kebutuhan Pemerintah Daerah,
-            Pemerintah Propinsi, Kementerian, BUMN , OIL Company, pelanggan
-            korporasi,Building Managemen , Manufacturing Company , General
+            Pemerintah Propinsi, Kementerian, BUMN, OIL Company, pelanggan
+            korporasi, Building Managemen, Manufacturing Company, General
             Contractor dll.
           </p>
-          <p style="display: flex; font-size: small">
+          <p style="display: flex; font-size: small; text-align: justify">
             Fokus kami adalah memberikan Layanan Penyediaan : Fire Truck, Fire
             Ladder, Airport Fire Fighting and Rescue dengan di dukung Fire Pump
             Merk. Morita yang merupakan brand ternama dari produsen terkemuka di
@@ -257,20 +279,18 @@
         </div>
         <div class="rightside">
           <h1>CERTIFICATE <span>KAJAMA FIRE</span></h1>
-          <div class="card">
-            <img src="asset/ISO/iso3.webp" alt="" />
-            <img src="asset/ISO/iso4.webp" alt="" />
-            <img src="asset/ISO/iso5.webp" alt="" />
-            <img src="asset/ISO/iso6.webp" alt="" />
-            <img src="asset/ISO/iso9.webp" alt="" />
-            <img src="asset/ISO/iso10.webp" alt="" />
-            <img src="asset/ISO/iso13.webp" alt="" />
-          </div>
+          <div class="card"><img src="asset/ISO/iso3.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso4.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso5.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso6.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso9.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso10.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso13.webp" alt="" /></div>
         </div>
       </div>
     </section>
     <section>
-      <div class="product">
+      <div class="product" style="margin: 0">
         <h1>PRODUCT <span>KAJAMA</span></h1>
       </div>
     </section>
