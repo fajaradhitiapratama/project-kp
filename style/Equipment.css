@@ -157,7 +157,7 @@ body {
 .mainhome .content {
   color: black;
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .leftside h1 span,
 .product h1 span,
@@ -200,17 +200,104 @@ body {
   flex: 1;
   text-align: center;
 }
-.card {
+.card-certificate {
   display: inline-block;
   transition: 1s;
 }
-.card img {
+.card-certificate img {
   box-shadow: 5px 5px 10px black;
   position: relative;
   border-radius: 5px;
   cursor: pointer;
 }
-.card:hover {
+.card-certificate:hover {
   transform: scale(1.1);
   z-index: 2;
+}
+/* Main Product */
+.main-product h1 {
+  text-align: center;
+  color: #000;
+}
+.main-product h1 span {
+  color: var(--primary);
+}
+.container-product {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 20px;
+  padding: 100px 20px;
+  cursor: pointer;
+}
+
+.container-product .card-product {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  height: 270px;
+  background: #000000;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgb(106, 106, 106);
+  transition: 0.5s;
+}
+
+.container-product .card-product:hover {
+  height: 250px;
+}
+.container-product .card-product .img-mobil {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.container-product .card-product:hover .img-mobil {
+  top: -100px;
+  scale: 1;
+  box-shadow: 0 15px 45px rgb(106, 106, 106);
+}
+.container-product .card-product .img-mobil img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container-product .card-product .content {
+  color: #fff;
+  position: absolute;
+  top: 220px;
+  width: 100%;
+  padding: 0 10px;
+  height: 30px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+}
+.container-product .card-product:hover .content {
+  top: 100px;
+  height: 250px;
+}
+.container-product .card-product .content a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  font-weight: 500;
+  background-color: var(--bg);
+  color: #000;
+  border-radius: 15px;
+}
+.container-product .card-product .content a:hover {
+  background-color: var(--primary);
+  color: #fff;
 }
