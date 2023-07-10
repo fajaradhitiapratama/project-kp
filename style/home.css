@@ -1,12 +1,22 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 :root {
   --primary: #ff0000;
   --bg: #ffffff;
   --bgnav: #838383;
 }
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 70vh;
   background-color: var(--bg);
   color: #fff;
+  margin: 0;
+
   /* min-height: 2000px; */
 }
 .info {
@@ -45,12 +55,10 @@ body {
 .navbar .navbar-logo span {
   color: var(--primary);
 }
-
 .navbar,
 .navbar-nav a:hover {
   color: var(--primary);
 }
-
 .navbar .navbar-nav a::after {
   content: "";
   display: block;
@@ -59,31 +67,112 @@ body {
   transform: scaleX(0);
   transition: 0.2s linear;
 }
-
 .navbar .navbar-nav a:hover::after {
   transform: scaleX(0.5);
 }
-
 .navbar .navbar-extra a {
   color: #fff;
   margin: 0 0.5rem;
 }
-
 .navbar .navbar-extra a:hover {
   color: var(--primary);
 }
+/* Main Mobil */
+/* Google Fonts - Poppins */
+.mainMobil {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efefef;
+}
+.container {
+  width: 200%;
+  padding: 40px 0;
+}
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+}
+.kartu {
+  background-color: #fff;
+  border-radius: 8px;
+}
+.kartu .image-box {
+  height: 200px;
+}
+.kartu .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.kartu .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+.kartu .profile-details img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.profile-details .name {
+  font-size: 15px;
+  font-weight: 500;
+}
+.profile-details .job {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4d4d4d;
+}
 
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}
+
+/* main Home */
 .mainhome {
   background-color: rgb(255, 255, 255);
   display: flex;
   border-bottom: 2px solid black;
   padding-bottom: 8px;
+  margin: 3%;
 }
 
 .mainhome .content {
   color: black;
   margin: 100px 0 0 0;
   margin-bottom: 0;
+}
+.leftside h1 span,
+.product h1 span,
+.rightside h1 span {
+  color: var(--primary);
+}
+.leftside p {
+  display: flex;
+  font-size: small;
+  padding-top: 1px;
+  text-align: justify;
 }
 .btn {
   display: inline-block;
@@ -117,14 +206,11 @@ body {
 }
 .product {
   display: grid;
+  margin: 0;
 }
 .product h1 {
   text-align: center;
   color: #000;
-}
-.product h1 span,
-.rightside h1 span {
-  color: var(--primary);
 }
 .menu a:hover,
 .linkcepat a:hover {
@@ -156,7 +242,7 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid #000;
-  background-color: #000;
+  background-color: #000000;
   cursor: grab;
 }
 
@@ -182,6 +268,7 @@ body {
   box-shadow: 5px 5px 10px black;
   position: relative;
   border-radius: 5px;
+  cursor: pointer;
 }
 .card:hover {
   transform: scale(1.1);

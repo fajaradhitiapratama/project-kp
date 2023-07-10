@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Card Slider in HTML CSS & JavaScript with Swiperjs</title>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="style/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/Equipment.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="home.html"
+        ><img src="asset/logo/kajama-logo.webp" alt="kajama-logo"
+      /></a>
+      <div class="info">
+        <a
+          href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+          ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+        </a>
+        <a href="mailto:info@kajama.net"
+          ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
+        >
+      </div>
+      <div class="navbar-nav">
+        <a href="home.html">Home</a>
+        <a href="Company-Profil.html">About Us</a>
+        <a href="Product.html">Product</a>
+        <a href="Quality.html">Quality</a>
+        <a href="Equipment.html">Equipment</a>
+        <a href="Video.html">Video</a>
+        <a href="code/Contact-Us/Contact-Us.html">Contact Us</a>
+      </div>
+    </nav>
+    <!-- Main Mobil -->
+    <section class="main-mobil">
+      <div class="container swiper">
+        <div class="slide-container">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="asset/Mobil/damkar 10 re.png" alt="" />
+              </div>
+              <div class="profile-details">
+                <div class="name-job">
+                  <h1 class="name" style="text-align: center">FIRE LEDDER</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="asset/Mobil/damkar 10 re.png" alt="" />
+              </div>
+              <div class="profile-details">
+                <div class="name-job">
+                  <h1 class="name" style="text-align: center">FIRE LEDDER</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="asset/Mobil/damkar 10 re.png" alt="" />
+              </div>
+              <div class="profile-details">
+                <div class="name-job">
+                  <h1 class="name" style="text-align: center">FIRE LEDDER</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="asset/Mobil/damkar 10 re.png" alt="" />
+              </div>
+              <div class="profile-details">
+                <div class="name-job">
+                  <h1 class="name" style="text-align: center">FIRE LEDDER</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <img src="asset/Mobil/damkar 10 re.png" alt="" />
+              </div>
+              <div class="profile-details">
+                <div class="name-job">
+                  <h1 class="name" style="text-align: center">FIRE LEDDER</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+    </section>
+    <!-- Main Home -->
+    <section class="mainhome">
+      <div class="content">
+        <div class="leftside">
+          <h1>WELCOME TO <span>KAJAMA</span></h1>
+          <p style="font-size: 16px">
+            PT. KARYA JAYA MANDIRI MEGAH PRAKOSO adalah Perusahaan yang bergerak
+            di bidang industri Khusus Karoseri Mobil Pemadam Kebakaran yang
+            didistribusikan untuk memenuhi kebutuhan Pemerintah Daerah,
+            Pemerintah Propinsi, Kementerian, BUMN, OIL Company, pelanggan
+            korporasi, Building Managemen, Manufacturing Company, General
+            Contractor dll.
+          </p>
+          <p style="font-size: 16px; padding-bottom: 3px">
+            Fokus kami adalah memberikan Layanan Penyediaan : Fire Truck, Fire
+            Ladder, Airport Fire Fighting and Rescue dengan di dukung Fire Pump
+            Merk. Morita yang merupakan brand ternama dari produsen terkemuka di
+            dunia, produk yang kami distribusikan telah melalui proses uji
+            pabrik dan dilengkapi sertifikat resmi serta bergaransi.
+          </p>
+          <button class="btn" type="button" onclick="readmore()">
+            Read More
+          </button>
+          <script>
+            function readmore() {
+              window.location.href = "Company-Profil.html";
+            }
+          </script>
+        </div>
+        <div class="rightside">
+          <h1>CERTIFICATE <span>KAJAMA FIRE</span></h1>
+          <div class="card"><img src="asset/ISO/iso3.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso4.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso5.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso6.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso9.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso10.webp" alt="" /></div>
+          <div class="card"><img src="asset/ISO/iso13.webp" alt="" /></div>
+        </div>
+      </div>
+    </section>
+    <!-- main Product -->
+    <section class="main-product">
+      <h1 class="judul">PRODUCT <span>KAJAMA FIRE</span></h1>
+      <div class="container-product">
+        <div class="card-product">
+          <div class="img-mobil"></div>
+          <div class="content"></div>
+        </div>
+      </div>
+    </section>
+    <script src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
+    <script src="js/equipment.js"></script>
+  </body>
+</html>
