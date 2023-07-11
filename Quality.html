@@ -1,385 +1,191 @@
 <!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kajama Fire</title>
+    <title>Responsive Card Slider</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Swiper CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      href="style/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
     />
-    <style>
-      :root {
-        --primary: #ff0000;
-        --bg: #ffffff;
-        --bgnav: #838383;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        background-color: var(--bg);
-        color: #fff;
-        /* min-height: 2000px; */
-      }
-      .info {
-        font-size: 10px;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        margin: 1rem 6.5rem 2rem;
-      }
-      .info a {
-        color: #fff;
-        text-decoration: none;
-        padding-right: 10px;
-        padding-left: 15px;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.4rem 7%;
-        background-color: rgba(0, 0, 0, 1);
-        border-bottom: 7px solid var(--primary);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-      }
-      .navbar .navbar-nav a {
-        text-decoration: none;
-        color: #ffffff;
-        display: inline-block;
-        font-size: 1.3rem;
-        margin: 0 1rem;
-      }
-      .navbar .navbar-logo span {
-        color: var(--primary);
-      }
 
-      .navbar,
-      .navbar-nav a:hover {
-        color: var(--primary);
-      }
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/Quality.css" />
 
-      .navbar .navbar-nav a::after {
-        content: "";
-        display: block;
-        padding-bottom: 0.1rem;
-        border-bottom: 0.1rem solid var(--primary);
-        transform: scaleX(0);
-        transition: 0.2s linear;
-      }
-
-      .navbar .navbar-nav a:hover::after {
-        transform: scaleX(0.5);
-      }
-
-      .navbar .navbar-extra a {
-        color: #fff;
-        margin: 0 0.5rem;
-      }
-
-      .navbar .navbar-extra a:hover {
-        color: var(--primary);
-      }
-
-      .mainhome {
-        background-color: rgb(255, 255, 255);
-        display: flex;
-      }
-
-      .mainhome .content {
-        color: black;
-        margin: 100px 0 0 0;
-        margin-bottom: 0;
-      }
-      .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #ff0000;
-        color: white;
-        border: none;
-        border-radius: 5%;
-        text-align: center;
-        text-decoration: none;
-        font-size: small;
-        cursor: pointer;
-      }
-      .btn:hover {
-        background-color: #000;
-        color: #fff;
-      }
-      .content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
-      .leftside {
-        flex: 1;
-      }
-      .rightside {
-        flex: 1;
-      }
-      .product {
-        display: grid;
-      }
-      .product h1 {
-        text-align: center;
-        color: #000;
-      }
-      .product h1 span {
-        color: var(--primary);
-      }
-      .menu a:hover,
-      .linkcepat a:hover {
-        font-weight: bold;
-      }
-
-      .social a {
-        display: inline-block;
-        margin: 1px;
-        color: black;
-      }
-      .social a i {
-        font-size: 24px;
-      }
-      .social a:hover {
-        color: red;
-      }
-
-      /* Slider */
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      @media (max-width: 1330px) {
-        .info {
-          margin: 0 0 2rem;
-        }
-      }
-    </style>
     <script src="https://kit.fontawesome.com/ff4f981f32.js"></script>
   </head>
   <body>
-    <!-- NAVBAR Start-->
-    <nav class="navbar">
-      <a href="home.html"
-        ><img src="asset/logo/kajama-logo.webp" alt="kajama-logo"
-      /></a>
-      <div class="info">
-        <a
-          href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
-          ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
-        </a>
-        <a href="mailto:info@kajama.net"
-          ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
-        >
-      </div>
-      <div class="navbar-nav">
-        <a href="home.html">Home</a>
-        <a href="Company-Profil.html">About Us</a>
-        <a href="Company-Profil.html">Product</a>
-        <a href="Quality.html">Quality</a>
-        <a href="Equipment.html">Equipment</a>
-        <a href="Video.html">Video</a>
-        <a href="Contact-Us.html">Contact Us</a>
-      </div>
-    </nav>
-    <!-- NAVBAR End-->
+    <div class="slide-container-marketing swiper">
+      <div class="slide-content-marketing">
+        <div class="card-wrapper-marketing swiper-wrapper">
+          <div class="card-marketing swiper-slide">
+            <div class="image-content-marketing">
+              <span class="overlay-marketing"></span>
 
-    <!-- Main Section Start -->
-    <section class="mainhome" style="margin: 3%">
-      <div class="content">
-        <div class="leftside">
-          <h1>WELCOME TO <span style="color: var(--primary)">KAJAMA</span></h1>
-          <p style="display: flex; font-size: small; padding-top: 1px">
-            PT. KARYA JAYA MANDIRI MEGAH PRAKOSO adalah Perusahaan yang bergerak
-            di bidang industri Khusus Karoseri Mobil Pemadam Kebakaran yang
-            didistribusikan untuk memenuhi kebutuhan Pemerintah Daerah,
-            Pemerintah Propinsi, Kementerian, BUMN , OIL Company, pelanggan
-            korporasi,Building Managemen , Manufacturing Company , General
-            Contractor dll.
-          </p>
-          <p style="display: flex; font-size: small">
-            Fokus kami adalah memberikan Layanan Penyediaan : Fire Truck, Fire
-            Ladder, Airport Fire Fighting and Rescue dengan di dukung Fire Pump
-            Merk. Morita yang merupakan brand ternama dari produsen terkemuka di
-            dunia, produk yang kami distribusikan telah melalui proses uji
-            pabrik dan dilengkapi sertifikat resmi serta bergaransi.
-          </p>
-          <button class="btn" type="button" onclick="readmore()">
-            Read More
-          </button>
-          <script>
-            function readmore() {
-              window.location.href = "Company-Profil.html";
-            }
-          </script>
-        </div>
-        <div class="rightside">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
+              <div class="card-image-marketing">
+                <img src="asset/marketing/pp1.webp" alt="" class="card-img" />
+              </div>
             </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="product">
-        <h1>PRODUCT <span>KAJAMA</span></h1>
-      </div>
-    </section>
-    <section class="marketing">
-      <div class="teammarketing"></div>
-      <div class="quality"></div>
-    </section>
 
-    <section class="casis">
-      <div class="merek"></div>
-    </section>
-    <!-- FOOTER -->
-    <footer>
-      <div
-        class="container-footer"
-        style="
-          color: #000;
-          border-top: 1px solid #000;
-          margin: 3%;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-gap: 100px;
-        "
-      >
-        <div class="address" style="color: #000; text-align: center">
-          <h2>ADDRESS</h2>
-          <div style="font-size: small">
-            <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI
-            MEGAH PRAKOSO<br />Griya Bukit Jaya Blok O.4/44, Gunung Putri,Bogor
-            <br />
-            <i class="fa-regular fa-envelope"></i> info@kajama.net <br />
-            <i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+            <div class="card-content-marketing">
+              <h2 class="name">Robert</h2>
+              <p class="description">Marketing <br />082210159777</p>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+                ><i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
           </div>
-        </div>
-        <div style="text-align: center">
-          <h2 style="color: #000">KAJAMA FIRE</h2>
-          <div class="menu" style="font-size: small">
-            <a href="home.html" style="text-decoration: none; color: #000"
-              >Home</a
-            ><br />
-            <a
-              href="Company-Profil.html"
-              style="text-decoration: none; color: #000"
-              >About Us</a
-            >
-            <br />
-            <a
-              href="Company-Profil.html"
-              style="text-decoration: none; color: #000"
-              >Product</a
-            >
-            <br />
-            <a href="Quality.html" style="text-decoration: none; color: #000"
-              >Quality</a
-            ><br />
-            <a href="Equipment.html" style="text-decoration: none; color: #000"
-              >Equipment</a
-            ><br />
-            <a href="Video.html" style="text-decoration: none; color: #000"
-              >Video</a
-            ><br />
-            <a href="Contact-Us.html" style="text-decoration: none; color: #000"
-              >Contact Us</a
-            >
+          <div class="card-marketing swiper-slide">
+            <div class="image-content-marketing">
+              <span class="overlay-marketing"></span>
+
+              <div class="card-image-marketing">
+                <img src="asset/marketing/pp2.webp" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content-marketing">
+              <h2 class="name">Gusty</h2>
+              <p class="description">Marketing <br />081285993315</p>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+                ><i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
           </div>
-        </div>
-        <div style="text-align: center">
-          <h2 style="color: #000">QUICK LINK</h2>
-          <div class="linkcepat" style="font-size: small">
-            <a href="Quality.html" style="text-decoration: none; color: #000"
-              >Quality Product</a
-            ><br />
-            <a href="Video.html" style="text-decoration: none; color: #000"
-              >Video</a
-            >
-            <br />
-            <a href="sertifikat.html" style="text-decoration: none; color: #000"
-              >Sertifikat</a
-            >
-            <br />
+          <div class="card-marketing swiper-slide">
+            <div class="image-content-marketing">
+              <span class="overlay-marketing"></span>
+
+              <div class="card-image-marketing">
+                <img src="asset/marketing/pp3.webp" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content-marketing">
+              <h2 class="name">Obeth</h2>
+              <p class="description">Marketing <br />082247444799</p>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+                ><i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="established" style="text-align: center">
-          <h2 style="color: #000">ESTABLISHED</h2>
-          <img src="asset/ISO/iso2.webp" alt="" />
-          <img src="asset/ISO/iso8.webp" alt="" />
-          <img src="asset/ISO/iso11.webp" alt="" /><br />
-          <img src="asset/logo/kajama-morita.webp" alt="" />
+          <div class="card-marketing swiper-slide">
+            <div class="image-content-marketing">
+              <span class="overlay-marketing"></span>
+
+              <div class="card-image-marketing">
+                <img src="asset/marketing/pp4.webp" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content-marketing">
+              <h2 class="name">Ancik</h2>
+              <p class="description">Marketing <br />081353685246</p>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+                ><i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card-marketing swiper-slide">
+            <div class="image-content-marketing">
+              <span class="overlay-marketing"></span>
+
+              <div class="card-image-marketing">
+                <img src="asset/marketing/pp5.webp" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content-marketing">
+              <h2 class="name">Shenny</h2>
+              <p class="description">Marketing <br />081213543903</p>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+                ><i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card-marketing swiper-slide">
+            <div class="image-content-marketing">
+              <span class="overlay-marketing"></span>
+
+              <div class="card-image-marketing">
+                <img src="asset/marketing/pp6.webp" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content-marketing">
+              <h2 class="name">Ningsih</h2>
+              <p class="description">Marketing <br />081290909013</p>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+                ><i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card-marketing swiper-slide">
+            <div class="image-content-marketing">
+              <span class="overlay-marketing"></span>
+
+              <div class="card-image-marketing">
+                <img src="asset/marketing/pp7.webp" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content-marketing">
+              <h2 class="name">Karin</h2>
+              <p class="description">Marketing <br />08114333959</p>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+                ><i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card-marketing swiper-slide">
+            <div class="image-content-marketing">
+              <span class="overlay-marketing"></span>
+
+              <div class="card-image-marketing">
+                <img src="asset/marketing/pp8.webp" alt="" class="card-img" />
+              </div>
+            </div>
+
+            <div class="card-content-marketing">
+              <h2 class="name">Riska</h2>
+              <p class="description">Marketing <br />081289453141</p>
+
+              <a
+                href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+                ><i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="social" style="text-align: center">
-        <a href="https://www.facebook.com/paijo.doang.39"
-          ><i class="fa-brands fa-facebook"></i
-        ></a>
-        <a href="https://www.youtube.com/channel/UCuY7S43GxzswhTMe0_DalZA"
-          ><i class="fa-brands fa-youtube"></i
-        ></a>
-        <a href="https://www.instagram.com/cucukdokterpemadam/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/cucuk-kajama-026b32146/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-      </div>
-    </footer>
-    <script>
-      feather.replace();
-    </script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-    <!-- main js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+    </div>
   </body>
+
+  <!-- Swiper JS -->
+  <script src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="js/quality.js"></script>
 </html>
