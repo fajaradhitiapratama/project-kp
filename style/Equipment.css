@@ -80,6 +80,7 @@ body {
 .navbar .navbar-extra a:hover {
   color: var(--primary);
 }
+
 /* main mobil */
 .main-mobil {
   /* background-color: rgba(0, 0, 0, 1); */
@@ -126,9 +127,9 @@ body {
 
 .swiper-navBtn {
   color: #ffffff;
-  height: 40px;
-  width: 40px;
-  background: #ff0000;
+  height: 30px;
+  width: 30px;
+  background: #000000;
   border-radius: 20%;
 }
 .swiper-navBtn::before,
@@ -220,6 +221,7 @@ body {
 }
 /* Main Product */
 .main-product h1 {
+  padding-top: 20px;
   text-align: center;
   color: #000;
 }
@@ -233,7 +235,10 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 100px 20px;
-  padding: 100px 20px;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
   cursor: pointer;
 }
 
@@ -307,14 +312,24 @@ body {
 }
 
 /* Marketing */
-.main-marketing h1 {
+.main-marketing {
+  display: flex;
+}
+.leftside-marketing h1,
+.rightside-support h1 {
   text-align: center;
 }
-.main-marketing h1 span {
+.leftside-marketing h1 span,
+.rightside-support h1 span {
   color: var(--primary);
 }
+.leftside-marketing {
+  flex: 1;
+  text-align: center;
+  padding-right: 50px;
+}
 .slide-container-marketing {
-  max-width: 1120px;
+  max-width: 820px;
   width: 100%;
   padding: 0;
 }
@@ -325,7 +340,8 @@ body {
 }
 .card-marketing {
   border-radius: 25px;
-  background-color: #f5f5f5;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .image-content-marketing,
 .card-content-marketing {
@@ -356,11 +372,12 @@ body {
   bottom: -40px;
   height: 40px;
   width: 40px;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 .overlay-marketing::after {
   border-radius: 0 25px 0 0;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
+  border-color: white;
 }
 .card-image-marketing {
   position: relative;
@@ -407,7 +424,7 @@ body {
   transition: color 0.3s ease;
 }
 .swiper-navBtn:hover {
-  color: var(--bg);
+  background-color: var(--primary);
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after {
@@ -434,4 +451,69 @@ body {
   .swiper-navBtn {
     display: none;
   }
+}
+
+/* support */
+.rightside-support {
+  flex: 1;
+  text-align: center;
+}
+.rightside-support h1 {
+  text-align: center;
+}
+.wrapper-support {
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  height: 350px;
+  background: #ffffff;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.wrapper-support i.button-support {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 36px;
+  width: 36px;
+  background-color: #000000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s linear;
+  z-index: 100;
+  cursor: pointer;
+}
+i.button-support:active {
+  transform: scale(0.94) translateY(-50%);
+}
+i#prev {
+  left: 25px;
+}
+i#next {
+  right: 25px;
+}
+.image-container-support {
+  height: 320px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+.image-container-support .carousel-support {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.carousel-support img {
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+  border: 10px solid #ffffff;
+  object-fit: cover;
 }
