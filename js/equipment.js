@@ -1,5 +1,5 @@
 // slide
-var swiper = new Swiper(".slide-container", {
+var swiper = new Swiper(".slide-container-mobil", {
   slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
@@ -34,10 +34,6 @@ var swiper = new Swiper(".slide-content-marketing", {
     clickable: true,
     dynamicBullets: true,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 });
 
 //support
@@ -70,3 +66,26 @@ const updateClick = (e) => {
 buttons.forEach((button) => button.addEventListener("click", updateClick));
 wrapper.addEventListener("mouseover", () => clearInterval(intervalId));
 wrapper.addEventListener("mouseleave", autoSlide);
+
+// chassis
+var swiper = new Swiper(".slide-container-chassis", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
