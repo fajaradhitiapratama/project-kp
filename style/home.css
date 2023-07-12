@@ -71,6 +71,9 @@ body {
   transform: scaleX(0);
   transition: 0.2s linear;
 }
+.navbar .navbar-nav .home-nav {
+  color: var(--primary);
+}
 .navbar .navbar-nav a:hover::after {
   transform: scaleX(0.5);
 }
@@ -92,7 +95,7 @@ body {
 
 .container-mobil {
   border-radius: 10px;
-  background-color: #000000;
+  background: linear-gradient(black, white);
   margin-top: 8%;
   margin-bottom: 0%;
   max-width: 1440px;
@@ -312,7 +315,7 @@ body {
   align-items: flex-start;
   width: 350px;
   height: 270px;
-  background: #000000;
+  background: linear-gradient(black, white);
   border-radius: 20px;
   box-shadow: 0 35px 80px rgb(106, 106, 106);
   transition: 0.5s;
@@ -345,7 +348,7 @@ body {
   object-fit: cover;
 }
 .container-product .card-product .content {
-  color: #fff;
+  color: #000000;
   position: absolute;
   top: 220px;
   width: 100%;
