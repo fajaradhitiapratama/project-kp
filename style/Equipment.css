@@ -23,11 +23,12 @@ body {
 
 /* navbar */
 .info {
+  display: flex;
   font-size: 10px;
   position: fixed;
   top: 10px;
   right: 10px;
-  margin: 1rem 6.5rem 2rem;
+  margin: 1rem 1rem 2rem;
 }
 .info a {
   color: #fff;
@@ -39,7 +40,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 7%;
+  padding: 15px;
   background-color: var(--blck);
   border-bottom: 7px solid var(--primary);
   position: fixed;
@@ -92,7 +93,7 @@ body {
 .container-mobil {
   border-radius: 10px;
   background-color: #000000;
-  margin-top: 10%;
+  margin-top: 8%;
   margin-bottom: 0%;
   max-width: 1440px;
   width: 100%;
@@ -223,6 +224,25 @@ body {
   z-index: 2;
 }
 /* Main Product */
+.main-product .btn-find {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.main-product .btn-find a:hover {
+  background-color: black;
+}
+.main-product .btn-find a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: small;
+  cursor: pointer;
+}
 .main-product h1 {
   padding-top: 20px;
   text-align: center;
@@ -241,7 +261,7 @@ body {
   padding-top: 100px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   cursor: pointer;
 }
 
@@ -389,6 +409,9 @@ body {
   border-radius: 50%;
   background: var(--primary);
   padding: 3px;
+}
+.card-image-marketing:hover {
+  background-color: var(--bg);
 }
 .card-image-marketing .card-img {
   height: 100%;
@@ -574,18 +597,20 @@ i#next {
 }
 .container-footer h2 {
   text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 .container-footer .listmenu .menu a,
 .container-footer .listlink .linkcepat a {
   display: grid;
   text-align: center;
-  font-size: small;
+  font-size: 15px;
   text-decoration: none;
   color: #000;
 }
 .container-footer .listmenu .menu a:hover,
 .container-footer .listlink .linkcepat a:hover {
-  font-size: small;
+  font-size: 15px;
   font-weight: bold;
 }
 .container-footer .established {
