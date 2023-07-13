@@ -89,7 +89,6 @@ body {
   display: flex;
   margin-top: 8%;
   justify-content: center;
-  padding-bottom: 15px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -103,7 +102,7 @@ body {
   padding-top: 40px;
   display: inline-block;
   place-items: center;
-  margin: 0;
+  margin: 2%;
   font-family: "Poppins", sans-serif;
   background: #ffffff;
   padding-right: 30px;
@@ -199,7 +198,8 @@ body {
   align-items: center;
   gap: 10px;
   color: #000000;
-  font-size: 14px;
+  font-size: 17px;
+  font-weight: 550;
   padding: 10px 24px;
 }
 
@@ -212,38 +212,90 @@ body {
 }
 
 .rightside-main {
-  padding-top: 20px;
-  flex: 1;
-}
-.rightside-main .container-tulisan .card-tulisan {
-  padding-right: 10px;
-}
-.rightside-main .container-tulisan .card-tulisan h1 {
-  font-size: 30px;
-  font-weight: bolder;
-  border-bottom: 3px solid black;
-}
-.rightside-main .container-tulisan .card-tulisan h1 span {
-  color: var(--primary);
-}
-.rightside-main .container-tulisan .card-tulisan h3 {
   padding-top: 10px;
-  font-size: 19px;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 2%;
 }
-.rightside-main .container-tulisan .card-tulisan p {
-  font-size: 17px;
-  font-weight: 500;
-  text-align: justify;
-  padding-top: 5px;
+.rightside-main .judul {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 3px solid black;
+  margin: 0 7% 0 7%;
 }
-.rightside-main .container-tulisan .card-tulisan p span {
+.rightside-main .judul h2 {
+  font-size: 25px;
   font-weight: bold;
 }
-.rightside-main .container-tulisan .card-tulisan ol,
-.rightside-main .container-tulisan .card-tulisan ul {
-  text-align: justify;
-  font-weight: 500;
-  padding-left: 15px;
+.rightside-main .judul a {
+  padding-top: 5px;
+}
+.rightside-main .card-produk {
+  padding-top: 10px;
+}
+.rightside-main .card-produk .card-img {
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.rightside-main .card-produk .card-img .card-img-produk {
+  display: inline-block;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  height: 250px;
+  width: 350px;
+}
+.rightside-main .card-produk .card-img .card-img-produk img {
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px black;
+  transition: 0.5s;
+}
+.rightside-main .card-produk .card-img .card-img-produk img:hover {
+  transform: scale(1.03);
+}
+.rightside-main .card-produk .card-img .card-img-produk .note-mobil h4 {
+  font-size: 16px;
+}
+.rightside-main .card-produk .card-img .card-img-produk .note-mobil h4:hover {
+  color: var(--primary);
+}
+
+.rightside-main .card-produk .card-btn {
+  text-align: center;
+}
+.rightside-main .card-produk .card-btn .btn-img-1 {
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  padding: 12px;
+  background-color: var(--primary);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.rightside-main .card-produk .card-btn {
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+.rightside-main .card-produk .card-btn a {
+  border: none;
+  font-size: 14px;
+  color: #000000;
+  padding: 12px;
+  background-color: var(--bg);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.rightside-main .card-produk .card-btn a:hover {
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--primary);
 }
 
 /* footer */
