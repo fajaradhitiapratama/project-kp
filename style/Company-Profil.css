@@ -87,7 +87,7 @@ body {
 
 /* main mobil */
 .main-mobil {
-  display: grid;
+  display: flex;
   margin-top: 8%;
   text-align: center;
   align-items: center;
@@ -99,13 +99,13 @@ body {
   background-color: #ffffff;
   margin-bottom: 0%;
   justify-content: center;
-  width: 1050px;
+  width: 1450px;
   padding: 20px 0 10px 0;
   box-shadow: 5px 5px 10px black;
 }
 
 .main-mobil .container-mobil .card-mobil img {
-  width: 950px;
+  width: 1250px;
   height: 350px;
   border-radius: 20px;
 }
@@ -121,17 +121,19 @@ body {
 }
 
 .mainhome .content {
+  display: flex;
   color: black;
   margin-bottom: 10px;
 }
 
 .leftside-main {
-  display: grid;
+  padding-top: 20px;
+  display: flex;
   place-items: center;
   margin: 0;
-  height: 20vh;
   font-family: "Poppins", sans-serif;
   background: #ffffff;
+  padding-right: 30px;
 }
 .dropdown {
   translate: 0 -20px;
@@ -234,6 +236,31 @@ body {
 
 .dropdown > .menu > a > span {
   font-size: 20px;
+}
+
+.rightside-main {
+  padding-top: 20px;
+  flex: 1;
+}
+.rightside-main .container-tulisan .card-tulisan h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  border-bottom: 3px solid black;
+}
+.rightside-main .container-tulisan .card-tulisan h1 span {
+  color: var(--primary);
+}
+.rightside-main .container-tulisan .card-tulisan h3 {
+  padding-top: 10px;
+  font-size: 19px;
+}
+.rightside-main .container-tulisan .card-tulisan p {
+  font-size: 17px;
+  font-weight: 500;
+  text-align: justify;
+}
+.rightside-main .container-tulisan .card-tulisan p span {
+  font-weight: bold;
 }
 
 /* Main Product */
