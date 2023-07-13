@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kajama Fire</title>
+    <title>VISI & MISI | Kajama Fire</title>
 
+    <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,180 +15,32 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <style>
-      :root {
-        --primary: #ff0000;
-        --bg: #ffffff;
-        --bgnav: #838383;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        background-color: var(--bg);
-        color: #fff;
-        /* min-height: 2000px; */
-      }
-      .info {
-        font-size: 10px;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        margin: 1rem 6.5rem 2rem;
-      }
-      .info a {
-        color: #fff;
-        text-decoration: none;
-        padding-right: 10px;
-        padding-left: 15px;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.4rem 7%;
-        background-color: rgba(0, 0, 0, 1);
-        border-bottom: 7px solid var(--primary);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-      }
-      .navbar .navbar-nav a {
-        text-decoration: none;
-        color: #ffffff;
-        display: inline-block;
-        font-size: 1.3rem;
-        margin: 0 1rem;
-      }
-      .navbar .navbar-logo span {
-        color: var(--primary);
-      }
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
 
-      .navbar,
-      .navbar-nav a:hover {
-        color: var(--primary);
-      }
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="style/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
+    />
 
-      .navbar .navbar-nav a::after {
-        content: "";
-        display: block;
-        padding-bottom: 0.1rem;
-        border-bottom: 0.1rem solid var(--primary);
-        transform: scaleX(0);
-        transition: 0.2s linear;
-      }
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/Visi-Misi.css" />
 
-      .navbar .navbar-nav a:hover::after {
-        transform: scaleX(0.5);
-      }
-
-      .navbar .navbar-extra a {
-        color: #fff;
-        margin: 0 0.5rem;
-      }
-
-      .navbar .navbar-extra a:hover {
-        color: var(--primary);
-      }
-
-      .mainhome {
-        background-color: rgb(255, 255, 255);
-        display: flex;
-      }
-
-      .mainhome .content {
-        color: black;
-        margin: 100px 0 0 0;
-        margin-bottom: 0;
-      }
-      .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #ff0000;
-        color: white;
-        border: none;
-        border-radius: 5%;
-        text-align: center;
-        text-decoration: none;
-        font-size: small;
-        cursor: pointer;
-      }
-      .btn:hover {
-        background-color: #000;
-        color: #fff;
-      }
-      .content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
-      .leftside {
-        flex: 1;
-      }
-      .rightside {
-        flex: 1;
-      }
-      .product {
-        display: grid;
-      }
-      .product h1 {
-        text-align: center;
-        color: #000;
-      }
-      .product h1 span {
-        color: var(--primary);
-      }
-      .menu a:hover,
-      .linkcepat a:hover {
-        font-weight: bold;
-      }
-
-      .social a {
-        display: inline-block;
-        margin: 1px;
-        color: black;
-      }
-      .social a i {
-        font-size: 24px;
-      }
-      .social a:hover {
-        color: red;
-      }
-
-      /* Slider */
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      @media (max-width: 1330px) {
-        .info {
-          margin: 0 0 2rem;
-        }
-      }
-    </style>
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <script src="https://kit.fontawesome.com/ff4f981f32.js"></script>
   </head>
   <body>
-    <!-- NAVBAR Start-->
+    <!-- Navbar -->
     <nav class="navbar">
       <a href="home.html"
         ><img src="asset/logo/kajama-logo.webp" alt="kajama-logo"
@@ -201,91 +55,73 @@
         >
       </div>
       <div class="navbar-nav">
-        <a href="home.html">Home</a>
-        <a href="Company-Profil.html">About Us</a>
-        <a href="Company-Profil.html">Product</a>
-        <a href="Quality.html">Quality</a>
-        <a href="Equipment.html">Equipment</a>
-        <a href="Video.html">Video</a>
-        <a href="Contact-Us.html">Contact Us</a>
+        <a class="home-nav" href="home.html">Home</a>
+        <a class="about-nav" href="Company-Profil.html">About Us</a>
+        <a class="product-nav" href="Product.html">Product</a>
+        <a class="quality-nav" href="Quality.html">Quality</a>
+        <a class="equipment-nav" href="Equipment.html">Equipment</a>
+        <a class="video-nav" href="Video.html">Video</a>
+        <a class="contact-nav" href="Contact-Us.html">Contact Us</a>
       </div>
     </nav>
-    <!-- NAVBAR End-->
-
-    <!-- Main Section Start -->
-    <section class="mainhome" style="margin: 3%">
-      <div class="content">
-        <div class="leftside">
-          <h1>WELCOME TO <span style="color: var(--primary)">KAJAMA</span></h1>
-          <p style="display: flex; font-size: small; padding-top: 1px">
-            PT. KARYA JAYA MANDIRI MEGAH PRAKOSO adalah Perusahaan yang bergerak
-            di bidang industri Khusus Karoseri Mobil Pemadam Kebakaran yang
-            didistribusikan untuk memenuhi kebutuhan Pemerintah Daerah,
-            Pemerintah Propinsi, Kementerian, BUMN , OIL Company, pelanggan
-            korporasi,Building Managemen , Manufacturing Company , General
-            Contractor dll.
-          </p>
-          <p style="display: flex; font-size: small">
-            Fokus kami adalah memberikan Layanan Penyediaan : Fire Truck, Fire
-            Ladder, Airport Fire Fighting and Rescue dengan di dukung Fire Pump
-            Merk. Morita yang merupakan brand ternama dari produsen terkemuka di
-            dunia, produk yang kami distribusikan telah melalui proses uji
-            pabrik dan dilengkapi sertifikat resmi serta bergaransi.
-          </p>
-          <button class="btn" type="button" onclick="readmore()">
-            Read More
-          </button>
-          <script>
-            function readmore() {
-              window.location.href = "Company-Profil.html";
-            }
-          </script>
+    <!-- Main Mobil -->
+    <section class="main-mobil">
+      <div class="container-mobil">
+        <div class="card-mobil">
+          <img src="asset/Mobil/mobil 1.webp" alt="" />
         </div>
-        <div class="rightside">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              <div class="swiper-slide">Slide 4</div>
-              <div class="swiper-slide">Slide 5</div>
-              <div class="swiper-slide">Slide 6</div>
-              <div class="swiper-slide">Slide 7</div>
-              <div class="swiper-slide">Slide 8</div>
-              <div class="swiper-slide">Slide 9</div>
+      </div>
+    </section>
+    <!-- Main Home -->
+    <section class="mainhome">
+      <div class="content">
+        <div class="leftside-main">
+          <div class="dropdown">
+            <div class="content">
+              <span class="material-symbols-outlined"> info </span>
+              <p>About Us</p>
+              <span class="material-symbols-outlined"> expand_more </span>
             </div>
-            <div class="swiper-pagination"></div>
+            <button type="button"></button>
+            <div class="menu">
+              <a href="Company-Profil.html" style="text-decoration: none">
+                <span class="material-symbols-outlined"> apartment </span>
+                <p>COMPANY PROFIL</p>
+              </a>
+              <a href="Visi-Misi.html" style="text-decoration: none">
+                <span class="material-symbols-outlined">
+                  workspace_premium
+                </span>
+                <p>VISI & MISI</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="rightside-main">
+          <div class="container-tulisan">
+            <div class="card-tulisan">
+              <h1><span>VISI </span>& <span>MISI</span></h1>
+              <h3>VISI</h3>
+              <p>
+                <span>PT. KARYA JAYA MANDIRI MEGAH PRAKOSO </span> Berkomitmen
+                Menjadi Perusahaan Mobil Pemadam Kebakaran Terkemuka di Asia,
+                Sebagai Pemimpin Dalam Berinovasi dan selalu Mengutamakan
+                Qualitas. <br />
+              </p>
+              <h3>MISI</h3>
+              <p>
+                <span>PT. KARYA JAYA MANDIRI MEGAH PRAKOSO </span>Berkomitmen
+                Untuk Mempertinggi Reputasi Perusahaan, Meningkatkan Pelayanan
+                dan Memenuhi Semua Kebutuhan Pelanggan
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section>
-      <div class="product">
-        <h1>PRODUCT <span>KAJAMA</span></h1>
-      </div>
-    </section>
-    <section class="marketing">
-      <div class="teammarketing"></div>
-      <div class="quality"></div>
-    </section>
-
-    <section class="casis">
-      <div class="merek"></div>
-    </section>
-    <!-- FOOTER -->
     <footer>
-      <div
-        class="container-footer"
-        style="
-          color: #000;
-          border-top: 1px solid #000;
-          margin: 3%;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-gap: 100px;
-        "
-      >
-        <div class="address" style="color: #000; text-align: center">
+      <div class="container-footer">
+        <div class="address">
           <h2>ADDRESS</h2>
           <div style="font-size: small">
             <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI
@@ -295,63 +131,35 @@
             <i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
           </div>
         </div>
-        <div style="text-align: center">
-          <h2 style="color: #000">KAJAMA FIRE</h2>
-          <div class="menu" style="font-size: small">
-            <a href="home.html" style="text-decoration: none; color: #000"
-              >Home</a
-            ><br />
-            <a
-              href="Company-Profil.html"
-              style="text-decoration: none; color: #000"
-              >About Us</a
-            >
-            <br />
-            <a
-              href="Company-Profil.html"
-              style="text-decoration: none; color: #000"
-              >Product</a
-            >
-            <br />
-            <a href="Quality.html" style="text-decoration: none; color: #000"
-              >Quality</a
-            ><br />
-            <a href="Equipment.html" style="text-decoration: none; color: #000"
-              >Equipment</a
-            ><br />
-            <a href="Video.html" style="text-decoration: none; color: #000"
-              >Video</a
-            ><br />
-            <a href="Contact-Us.html" style="text-decoration: none; color: #000"
-              >Contact Us</a
-            >
+        <div class="listmenu">
+          <h2>KAJAMA FIRE</h2>
+          <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="Company-Profil.html">About Us</a>
+            <a href="Product.html">Product</a>
+            <a href="Quality.html">Quality</a>
+            <a href="Equipment.html">Equipment</a>
+            <a href="Video.html">Video</a>
+            <a href="Contact-Us.html">Contact Us</a>
           </div>
         </div>
-        <div style="text-align: center">
-          <h2 style="color: #000">QUICK LINK</h2>
-          <div class="linkcepat" style="font-size: small">
-            <a href="Quality.html" style="text-decoration: none; color: #000"
-              >Quality Product</a
-            ><br />
-            <a href="Video.html" style="text-decoration: none; color: #000"
-              >Video</a
-            >
-            <br />
-            <a href="sertifikat.html" style="text-decoration: none; color: #000"
-              >Sertifikat</a
-            >
-            <br />
+        <div class="listlink">
+          <h2>QUICK LINK</h2>
+          <div class="linkcepat">
+            <a href="Quality.html">Quality Product</a>
+            <a href="Video.html">Video</a>
+            <a href="sertifikat.html">Sertifikat</a>
           </div>
         </div>
-        <div class="established" style="text-align: center">
-          <h2 style="color: #000">ESTABLISHED</h2>
+        <div class="established">
+          <h2>ESTABLISHED</h2>
           <img src="asset/ISO/iso2.webp" alt="" />
           <img src="asset/ISO/iso8.webp" alt="" />
-          <img src="asset/ISO/iso11.webp" alt="" /><br />
+          <img src="asset/ISO/iso11.webp" alt="" />
           <img src="asset/logo/kajama-morita.webp" alt="" />
         </div>
       </div>
-      <div class="social" style="text-align: center">
+      <div class="social">
         <a href="https://www.facebook.com/paijo.doang.39"
           ><i class="fa-brands fa-facebook"></i
         ></a>
@@ -366,20 +174,6 @@
         ></a>
       </div>
     </footer>
-    <script>
-      feather.replace();
-    </script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-    <!-- main js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
   </body>
 </html>
