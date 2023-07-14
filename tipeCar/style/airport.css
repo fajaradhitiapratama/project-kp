@@ -90,6 +90,7 @@ body {
   margin-top: 6%;
   justify-content: center;
   background-color: rgb(255, 255, 255);
+  flex-direction: column;
 }
 
 .mainhome .content {
@@ -241,10 +242,10 @@ body {
   background-color: rgb(255, 255, 255);
 }
 .rightside-main .card-produk .card-img .card-img-produk {
-  display: inline-block;
+  display: inline-flex;
   justify-content: center;
-  /* align-items: center; */
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
   height: 250px;
   width: 350px;
 }
@@ -267,7 +268,7 @@ body {
 .rightside-main .card-produk .card-btn {
   text-align: center;
 }
-.rightside-main .card-produk .card-btn .btn-img-6 {
+.rightside-main .card-produk .card-btn .btn-img-2 {
   border: none;
   font-size: 14px;
   font-weight: bold;
@@ -282,22 +283,6 @@ body {
 .rightside-main .card-produk .card-btn {
   flex-wrap: wrap;
   padding-top: 10px;
-}
-.rightside-main .card-produk .card-btn a {
-  border: none;
-  font-size: 14px;
-  color: #000000;
-  padding: 12px;
-  background-color: var(--bg);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-.rightside-main .card-produk .card-btn a:hover {
-  font-weight: bold;
-  color: #fff;
-  background-color: var(--primary);
 }
 .rightside-main .judul a {
   font-size: 14px;
