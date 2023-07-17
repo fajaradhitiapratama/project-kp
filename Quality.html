@@ -1,32 +1,178 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Draggable Image Slider | CodingNepal</title>
-    <link rel="stylesheet" href="style/Quality.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-    <script src="js/quality.js" defer></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <i id="left" class="fa-solid fa-angle-left"></i>
-      <div class="carousel">
-        <img src="asset/Chassis/fuso.png" alt="img" draggable="false" />
-        <img src="asset/Chassis/hino.png" alt="img" draggable="false" />
-        <img src="asset/Chassis/isuzu.png" alt="img" draggable="false" />
-        <img src="asset/Chassis/iveco.png" alt="img" draggable="false" />
-        <img src="asset/Chassis/man.png" alt="img" draggable="false" />
-        <img src="asset/Chassis/merci.png" alt="img" draggable="false" />
-        <img src="asset/Chassis/Scania.png" alt="img" draggable="false" />
-        <img src="asset/Chassis/toyota.png" alt="img" draggable="false" />
-        <img src="asset/Chassis/volvo.png" alt="img" draggable="false" />
-      </div>
-      <i id="right" class="fa-solid fa-angle-right"></i>
+<html>
+<head>
+  <title>Galeri Foto</title>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery-item {
+      margin: 10px;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .gallery-item .caption {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom: 7px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .navbar .navbar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+  }
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+
+  .navbar,
+  .navbar-nav a:hover {
+    color: var(--primary);
+  }
+
+  .navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.1rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+
+  .mainhome {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding-top: 0;
+  }
+
+  .mainhome .content {
+    color: black;
+    margin: 2%;
+  }
+    
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="home.html"
+      ><img src="asset/logo/kajama-logo.webp" alt="kajama-logo"
+    /></a>
+    <div class="info">
+      <a
+        href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+        ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+      </a>
+      <a href="mailto:info@kajama.net"
+        ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
+      >
     </div>
-  </body>
+    <div class="navbar-nav">
+      <a class="home-nav" href="home.html">Home</a>
+      <a class="about-nav" href="Company-Profil.html">About Us</a>
+      <a class="product-nav" href="Product.html">Product</a>
+      <a class="quality-nav" href="Quality.html">Quality</a>
+      <a class="equipment-nav" href="Equipment.html">Equipment</a>
+      <a class="video-nav" href="Video.html">Video</a>
+      <a class="contact-nav" href="Contact-Us.html">Contact Us</a>
+    </div>
+  </nav>
+  <div class="gallery">
+    <div class="Equipment">
+      <img src="asset/" alt="1.png">
+      <div class="caption">baju dagmkar </div>
+    </div>
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q1.JPG" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+    
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q2.JPG" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q3.JPG" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q4.JPG" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q5.JPG" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q6.JPG" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q7.jpg" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q8.jpg" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q9.jpg" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="asset/QUALTY/q10.jpg" alt="Foto 2">
+      <div class="caption">Penjelasan Foto 2</div>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item">
+        </div>
+        <div class="gallery-item">
+            <video controls>
+                <source src="asset/QUALTY/q12.mp4" type="video/mp4">
+            </video>
+        </div>
+  </div>
+</body>
 </html>

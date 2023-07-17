@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Embed Video</title>
+    <title>VIDEO KAJAMA </title>
     <style>
+      
         body {
             display: flex;
             flex-direction: column;
@@ -24,7 +25,74 @@
             width: 100%;
             height: 200px;
         }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom: 7px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .navbar .navbar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+  }
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+
+  .navbar,
+  .navbar-nav a:hover {
+    color: var(--primary);
+  }
+
+  .navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.1rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+
+  .mainhome {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding-top: 0;
+  }
+
+  .mainhome .content {
+    color: black;
+    margin: 2%;
+  }
+  
+  </style>
     </style>
+
+<style>
+  
+</style>
 </head>
 <body>
   <nav class="navbar">
@@ -48,7 +116,9 @@
       <a class="equipment-nav" href="Equipment.html">Equipment</a>
       <a class="video-nav" href="Video.html">Video</a>
       <a class="contact-nav" href="code/Contact-Us/Contact-Us.html">Contact Us</a>
+   
     </div>
+  </nav>
     <div class="video-container">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/OPNGDTtiRpE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/OPNGDTtiRpE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -26,9 +26,94 @@
       margin-top: 5px;
       font-size: 14px;
     }
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom: 7px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  .navbar .navbar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+  }
+  .navbar .navbar-logo span {
+    color: var(--primary);
+  }
+
+  .navbar,
+  .navbar-nav a:hover {
+    color: var(--primary);
+  }
+
+  .navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.1rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+  }
+
+  .navbar .navbar-extra a:hover {
+    color: var(--primary);
+  }
+
+  .mainhome {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding-top: 0;
+  }
+
+  .mainhome .content {
+    color: black;
+    margin: 2%;
+  }
+    
   </style>
 </head>
 <body>
+  <nav class="navbar">
+    <a href="home.html"
+      ><img src="asset/logo/kajama-logo.webp" alt="kajama-logo"
+    /></a>
+    <div class="info">
+      <a
+        href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+        ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+      </a>
+      <a href="mailto:info@kajama.net"
+        ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
+      >
+    </div>
+    <div class="navbar-nav">
+      <a class="home-nav" href="home.html">Home</a>
+      <a class="about-nav" href="Company-Profil.html">About Us</a>
+      <a class="product-nav" href="Product.html">Product</a>
+      <a class="quality-nav" href="Quality.html">Quality</a>
+      <a class="equipment-nav" href="Equipment.html">Equipment</a>
+      <a class="video-nav" href="Video.html">Video</a>
+      <a class="contact-nav" href="Contact-Us.html">Contact Us</a>
+    </div>
+  </nav>
   <div class="gallery">
     <div class="Equipment">
       <img src="asset/equipment/fix 1.png" alt="1.png">
@@ -95,7 +180,7 @@
       <img src="asset/equipment/fix 15.png" alt="Foto 2">
       <div class="caption">Penjelasan Foto 2</div>
     </div>
-
+  
     <div class="gallery-item">
       <img src="asset/equipment/fix 16.png" alt="Foto 16">
       <div class="caption">Penjelasan Foto 16</div>
