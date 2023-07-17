@@ -88,23 +88,26 @@ body {
 /* main home */
 .mainhome {
   background-color: rgb(255, 255, 255);
-  display: flex;
+  display: grid;
   padding-bottom: 8px;
   margin-left: 3%;
   margin-right: 3%;
   margin-top: 8%;
 }
+.mainhome h1 {
+  text-align: center;
+  text-shadow: 1.2px 1.3px rgb(212, 210, 210);
+}
+.mainhome h1 span {
+  color: var(--primary);
+}
 .mainhome .container {
   display: flex;
 }
-.mainhome .container h1 {
-  text-align: center;
-}
 .mainhome .container .card {
-  margin: 2%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 .mainhome .container .card .card-img {
@@ -128,9 +131,8 @@ body {
   text-shadow: 1.2px 1.3px #000000;
   text-align: center;
   font-weight: 500;
-  margin: 2%;
   flex-wrap: wrap;
-  padding-right: 30px;
+  justify-content: center;
 }
 .mainhome .container .video video {
   box-shadow: 4px 4px 4px black;
