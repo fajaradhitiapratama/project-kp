@@ -86,7 +86,6 @@
     color: black;
     margin: 2%;
   }
-  
   </style>
     </style>
 
@@ -128,6 +127,230 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/XQBu0kvIe_U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     </div>
+    <footer>
+      <div
+        class="container-footer"
+        style="
+          color: #000;
+          border-top: 1px solid #000;
+          margin: 3%;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 100px;
+        "
+      >
+        <div class="address" style="color: #000; text-align: center">
+          <h2>ADDRESS</h2>
+          <div style="font-size: small">
+            <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI
+            MEGAH PRAKOSO<br />Griya Bukit Jaya Blok O.4/44, Gunung Putri,Bogor
+            <br />
+            <i class="fa-regular fa-envelope"></i> info@kajama.net <br />
+            <i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: #000">KAJAMA FIRE</h2>
+          <div class="menu" style="font-size: small">
+            <a href="home.html" style="text-decoration: none; color: #000"
+              >Home</a
+            ><br />
+            <a
+              href="Company-Profil.html"
+              style="text-decoration: none; color: #000"
+              >About Us</a
+            >
+            <br />
+            <a href="Product.html" style="text-decoration: none; color: #000"
+              >Product</a
+            >
+            <br />
+            <a href="Quality.html" style="text-decoration: none; color: #000"
+              >Quality</a
+            ><br />
+            <a href="Equipment.html" style="text-decoration: none; color: #000"
+              >Equipment</a
+            ><br />
+            <a href="Video.html" style="text-decoration: none; color: #000"
+              >Video</a
+            ><br />
+            <a href="Contact-Us.html" style="text-decoration: none; color: #000"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        <div style="text-align: center">
+          <h2 style="color: #000">QUICK LINK</h2>
+          <div class="linkcepat" style="font-size: small">
+            <a href="Quality.html" style="text-decoration: none; color: #000"
+              >Quality Product</a
+            ><br />
+            <a href="Video.html" style="text-decoration: none; color: #000"
+              >Video</a
+            >
+            <br />
+            <a href="sertifikat.html" style="text-decoration: none; color: #000"
+              >Sertifikat</a
+            >
+            <br />
+          </div>
+        </div>
+        <div class="established" style="text-align: center">
+          <h2 style="color: #000">ESTABLISHED</h2>
+          <img src="asset/ISO/iso2.webp" alt="" />
+          <img src="asset/ISO/iso8.webp" alt="" />
+          <img src="asset/ISO/iso11.webp" alt="" /><br />
+          <img src="asset/logo/kajama-morita.webp" alt="" />
+        </div>
+      </div>
+      <div class="social" style="text-align: center">
+        <a href="https://www.facebook.com/paijo.doang.39"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.youtube.com/channel/UCuY7S43GxzswhTMe0_DalZA"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://www.instagram.com/cucukdokterpemadam/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/cucuk-kajama-026b32146/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script>
+      var validate = function (e) {
+        var fields = document.querySelectorAll(
+          '.form-container textarea, .form-container input[type="text"]'
+        );
+        var regEx;
+        var removeSpan;
+        var par;
+        var check = false;
+        var val;
+        var errArr = [];
+
+        for (var i = 0; i < fields.length; i++) {
+          if (fields[i].value === "") {
+            if (fields[i].nextElementSibling.classList.contains("error")) {
+              removeSpan = fields[i].nextElementSibling;
+              par = fields[i].parentNode;
+              par.removeChild(removeSpan);
+              fields[i].nextElementSibling.innerHTML =
+                "Hmmm! " + fields[i].placeholder + " is required?";
+              fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
+              check = false;
+              errArr.push(fields[i]);
+            }
+            fields[i].nextElementSibling.innerHTML =
+              "Hmmm! " + fields[i].placeholder + " is required?";
+            fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
+            check = false;
+            errArr.push(fields[i]);
+          } else {
+            // check if message and name values contain valid characters.
+            if (fields[i].id !== "email" && fields[i].id !== "phone") {
+              val = isValidChar(fields[i]);
+              if (val === false) {
+                fields[i].nextElementSibling.innerHTML =
+                  "Are you trying to HACK ME!";
+                fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
+                check = false;
+                errArr.push(fields[i]);
+              } else {
+                fields[i].nextElementSibling.innerHTML = "";
+                fields[i].style.boxShadow = "none";
+                check = true;
+              }
+            }
+
+            if (fields[i].id === "phone") {
+              val = isValidPhone(fields[i]);
+              if (val === false) {
+                fields[i].nextElementSibling.innerHTML =
+                  "Hmmm! Your phone number is not valid?";
+                fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
+                check = false;
+                errArr.push(fields[i]);
+              } else {
+                fields[i].nextElementSibling.innerHTML = "";
+                fields[i].style.boxShadow = "none";
+                check = true;
+              }
+            }
+
+            if (fields[i].id === "email") {
+              val = isValidEmail(fields[i]);
+              if (val === false) {
+                fields[i].nextElementSibling.innerHTML =
+                  "Hmmm! Your email address is not valid?";
+                fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
+                check = false;
+                errArr.push(fields[i]);
+              } else {
+                fields[i].nextElementSibling.innerHTML = "";
+                fields[i].style.boxShadow = "none";
+                check = true;
+              }
+            }
+          }
+        }
+
+        if (check === false) {
+          var count = 0;
+          var toErr = setInterval(function () {
+            var e = errArr[0].offsetTop + -25;
+            var pos = Math.abs(e);
+            if (count < pos) {
+              count++;
+              window.scrollTo(0, count);
+            } else {
+              clearInterval(toErr);
+            }
+          }, 1);
+        }
+
+        return check;
+
+        // Helper functions.
+        function isValidEmail(e) {
+          regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          var email = e.value;
+          if (!regEx.test(email)) {
+            return false;
+          }
+        }
+
+        function isValidChar(e) {
+          regEx = /^[a-zA-Z@#$%!?^&*()_+\-=\[\]{};':"\\|,.\/? ]*$/;
+          var value = e.value;
+          if (!regEx.test(value)) {
+            return false;
+          }
+        }
+
+        function isValidPhone(e) {
+          regEx = /^[+]?[(]?[+]?\d{2,4}[)]?[-\s]?\d{2,8}[-\s]?\d{2,8}$/;
+          var value = e.value;
+          if (!regEx.test(value)) {
+            return false;
+          }
+        }
+      };
+    </script>
 </body>
 </html>
 
