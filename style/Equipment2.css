@@ -133,7 +133,6 @@ body {
 .mainhome .container .card .card-img p {
   font-size: 15px;
 }
-
 .mainhome .container .card .card-img p:hover {
   color: var(--primary);
   font-weight: 750;
@@ -146,7 +145,7 @@ body {
   text-align: center;
   padding-top: 15px;
 }
-.mainhome .card-btn .btn-img-1 {
+.mainhome .card-btn .btn-img-2 {
   border: none;
   font-size: 14px;
   font-weight: bold;
