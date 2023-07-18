@@ -71,7 +71,7 @@ body {
   transform: scaleX(0);
   transition: 0.2s linear;
 }
-.navbar .navbar-nav .quality-nav {
+.navbar .navbar-nav .equipment-nav {
   color: var(--primary);
 }
 .navbar .navbar-nav a:hover::after {
@@ -105,6 +105,7 @@ body {
   display: flex;
 }
 .mainhome .container .card {
+  margin: 0 20%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -125,21 +126,41 @@ body {
   object-fit: cover;
   border-radius: 5px;
 }
-.mainhome .container .video {
-  color: var(--primary);
-  font-size: 13px;
-  text-shadow: 1.2px 1.3px #000000;
-  text-align: center;
-  font-weight: 500;
-  flex-wrap: wrap;
-  justify-content: center;
+.mainhome .container .card .card-img a {
+  text-decoration: none;
+  color: #000;
 }
-.mainhome .container .video video {
-  box-shadow: 4px 4px 4px black;
-  border-radius: 10px;
-  width: 300px;
-  height: 500px;
-  object-fit: cover;
+.mainhome .card-btn {
+  text-align: center;
+  padding-top: 15px;
+}
+.mainhome .card-btn .btn-img-1 {
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  padding: 12px;
+  background-color: var(--primary);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.mainhome .card-btn a {
+  border: none;
+  font-size: 14px;
+  color: #000000;
+  padding: 12px;
+  background-color: var(--bg);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.mainhome .card-btn a:hover {
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--primary);
 }
 
 /* footer */
