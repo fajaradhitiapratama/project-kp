@@ -1,0 +1,224 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+:root {
+  --primary: #ff0303;
+  --bg: #ffffff;
+  --bgnav: #838383;
+  --blck: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 65vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  margin: 0;
+}
+
+/* navbar */
+.info {
+  display: flex;
+  font-size: 10px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin: 1rem 1rem 2rem;
+}
+.info a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 15px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--blck);
+  border-bottom: 7px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+.navbar,
+.navbar-nav a:hover {
+  color: var(--primary);
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+.navbar .navbar-nav .contact-nav {
+  color: var(--primary);
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+/* main home */
+.mainhome {
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  padding-bottom: 8px;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 8%;
+}
+.mainhome h1 {
+  text-align: center;
+  text-shadow: 1.2px 1.3px rgb(212, 210, 210);
+}
+.mainhome h1 span {
+  color: var(--primary);
+}
+.mainhome .content {
+  display: flex;
+}
+.mainhome .content .leftside iframe {
+  width: 700px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 3px 2px 2px rgb(212, 210, 210);
+}
+.rightside {
+  flex: 1;
+  padding: 0 30px;
+}
+.rightside .form-container {
+  width: auto;
+  box-shadow: 2px 2px 2px rgb(212, 210, 210);
+  border: 1px solid rgb(212, 210, 210);
+  padding: 10px;
+  justify-content: center;
+}
+label {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+input,
+textarea {
+  text-align: left;
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+button {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  color: #fff;
+  background: red;
+  line-height: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid red;
+  margin-top: 25px;
+  transition: color 0.4s ease-out, background 0.4s ease-out;
+}
+button:hover {
+  color: rgb(255, 255, 255);
+  background: #000000;
+}
+.errors {
+  display: block;
+  color: red;
+  margin-top: 5px;
+}
+.error {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  box-shadow: 0 0 15px 0 rgba(255, 36, 0, 1);
+}
+
+/* footer */
+.container-footer {
+  color: #000;
+  border-top: 1px solid #000;
+  margin: 3%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 100px;
+}
+.container-footer .address {
+  color: black;
+  text-align: center;
+}
+.container-footer h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.container-footer .listmenu .menu a,
+.container-footer .listlink .linkcepat a {
+  display: grid;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+}
+.container-footer .listmenu .menu a:hover,
+.container-footer .listlink .linkcepat a:hover {
+  font-size: 15px;
+  font-weight: bold;
+}
+.container-footer .established {
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social {
+  text-align: center;
+}
+.social a {
+  display: inline-block;
+  margin: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #000;
+}
+.social a i {
+  font-size: 35px;
+}
+.social a:hover {
+  color: var(--primary);
+}

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact US | Kajama Fire</title>
+    <title>CONTACT US | Kajama Fire</title>
 
+    <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,233 +15,32 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <style>
-      :root {
-        --primary: #ff0000;
-        --bg: #ffffff;
-        --bgnav: #838383;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        background-color: var(--bg);
-        color: #fff;
-        /* min-height: 2000px; */
-      }
-      .info {
-        font-size: 10px;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        margin: 1rem 6.5rem 2rem;
-      }
-      .info a {
-        color: #fff;
-        text-decoration: none;
-        padding-right: 10px;
-        padding-left: 15px;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.4rem 7%;
-        background-color: rgba(0, 0, 0, 1);
-        border-bottom: 7px solid var(--primary);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-      }
-      .navbar .navbar-nav a {
-        text-decoration: none;
-        color: #ffffff;
-        display: inline-block;
-        font-size: 1.3rem;
-        margin: 0 1rem;
-      }
-      .navbar .navbar-logo span {
-        color: var(--primary);
-      }
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
 
-      .navbar,
-      .navbar-nav a:hover {
-        color: var(--primary);
-      }
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="style/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
+    />
 
-      .navbar .navbar-nav a::after {
-        content: "";
-        display: block;
-        padding-bottom: 0.1rem;
-        border-bottom: 0.1rem solid var(--primary);
-        transform: scaleX(0);
-        transition: 0.2s linear;
-      }
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/Contact-Us.css" />
 
-      .navbar .navbar-nav a:hover::after {
-        transform: scaleX(0.5);
-      }
-
-      .navbar .navbar-extra a {
-        color: #fff;
-        margin: 0 0.5rem;
-      }
-
-      .navbar .navbar-extra a:hover {
-        color: var(--primary);
-      }
-
-      .mainhome {
-        background-color: rgb(255, 255, 255);
-        display: flex;
-        padding-top: 0;
-      }
-
-      .mainhome .content {
-        color: black;
-        margin: 2%;
-      }
-      .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #ff0000;
-        color: white;
-        border: none;
-        border-radius: 5%;
-        text-align: center;
-        text-decoration: none;
-        font-size: small;
-        cursor: pointer;
-      }
-      .btn:hover {
-        background-color: #000;
-        color: #fff;
-      }
-      .content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-      }
-      .leftside {
-        flex: 1;
-        text-align: center;
-      }
-      .rightside {
-        flex: 1;
-        /* text-align: center; */
-      }
-      .product {
-        display: grid;
-      }
-      .product h1 {
-        text-align: center;
-        color: #000;
-      }
-      .product h1 span {
-        color: var(--primary);
-      }
-      .menu a:hover,
-      .linkcepat a:hover {
-        font-weight: bold;
-      }
-
-      .social a {
-        display: inline-block;
-        margin: 1px;
-        color: black;
-      }
-      .social a i {
-        font-size: 24px;
-      }
-      .social a:hover {
-        color: red;
-      }
-
-      /* Slider */
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .form-container {
-        width: 50%;
-        margin: auto;
-        padding: 0;
-        border: 1px solid #f7f7f7;
-      }
-      label {
-        display: block;
-        margin-top: 25px;
-        font-size: 1rem;
-      }
-      input,
-      textarea {
-        width: 80%;
-        padding: 15px;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-      }
-      button {
-        width: 82.5%;
-        height: 50px;
-        border-radius: 5px;
-        color: #fff;
-        background: red;
-        line-height: 1rem;
-        font-size: 1rem;
-        cursor: pointer;
-        border: 1px solid red;
-        margin-top: 25px;
-        transition: color 0.4s ease-out, background 0.4s ease-out;
-      }
-      button:hover {
-        color: red;
-        background: #fff;
-      }
-      .errors {
-        display: block;
-        color: red;
-        margin-top: 5px;
-      }
-      .error {
-        -webkit-transition: 0.2s;
-        -moz-transition: 0.2s;
-        -ms-transition: 0.2s;
-        -o-transition: 0.2s;
-        transition: 0.2s;
-        box-shadow: 0 0 15px 0 rgba(255, 36, 0, 1);
-      }
-      .contact h1 span {
-        color: var(--primary);
-      }
-      @media (max-width: 1330px) {
-        .info {
-          margin: 0 0 2rem;
-        }
-      }
-    </style>
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <script src="https://kit.fontawesome.com/ff4f981f32.js"></script>
   </head>
   <body>
-    <!-- NAVBAR Start-->
+    <!-- Navbar -->
     <nav class="navbar">
       <a href="home.html"
         ><img src="asset/logo/kajama-logo.webp" alt="kajama-logo"
@@ -254,37 +55,21 @@
         >
       </div>
       <div class="navbar-nav">
-        <a href="home.html">Home</a>
-        <a href="Company-Profil.html">About Us</a>
-        <a href="Company-Profil.html">Product</a>
-        <a href="Quality.html">Quality</a>
-        <a href="Equipment.html">Equipment</a>
-        <a href="Video.html">Video</a>
-        <a href="Contact-Us.html">Contact Us</a>
+        <a class="home-nav" href="home.html">Home</a>
+        <a class="about-nav" href="Company-Profil.html">About Us</a>
+        <a class="product-nav" href="Product.html">Product</a>
+        <a class="quality-nav" href="Quality.html">Quality</a>
+        <a class="equipment-nav" href="Equipment.html">Equipment</a>
+        <a class="video-nav" href="Video.html">Video</a>
+        <a class="contact-nav" href="Contact-Us.html">Contact Us</a>
       </div>
     </nav>
-    <!-- NAVBAR End-->
-
-    <!-- Main Section Start -->
-    <div
-      class="contact"
-      style="
-        padding-top: 15vh;
-        margin: 2%;
-        text-align: center;
-        border-bottom: 3px solid black;
-      "
-    >
-      <h1 style="color: #000">CONTACT <span>US</span></h1>
-    </div>
-    <section class="mainhome" style="margin-top: 0">
+    <section class="mainhome">
+      <h1>CONTACT <span>US</span></h1>
       <div class="content">
         <div class="leftside">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6181451464718!2d106.89887137464355!3d-6.443052993548237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eab771dcf6e7%3A0x2da5ad3ac56902cb!2sFire%20Truck%20Kajama%20PT!5e0!3m2!1sid!2sid!4v1688701023226!5m2!1sid!2sid"
-            width="600"
-            height="450"
-            style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -306,7 +91,6 @@
                 placeholder="Your name"
               />
               <span class="errors"></span>
-
               <label for="email">* Email</label>
               <input
                 type="text"
@@ -315,7 +99,6 @@
                 name="email"
               />
               <span class="errors"></span>
-
               <label for="phone">* Phone</label>
               <input
                 type="text"
@@ -324,7 +107,6 @@
                 name="phone"
               />
               <span class="errors"></span>
-
               <label for="subject">* Message</label>
               <textarea
                 placeholder="Your message"
@@ -334,27 +116,15 @@
                 id="subject"
               ></textarea>
               <span class="errors"></span>
-
               <button type="submit" value="Submit">Submit</button>
             </form>
           </div>
         </div>
       </div>
     </section>
-    <!-- FOOTER -->
     <footer>
-      <div
-        class="container-footer"
-        style="
-          color: #000;
-          border-top: 1px solid #000;
-          margin: 3%;
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-gap: 100px;
-        "
-      >
-        <div class="address" style="color: #000; text-align: center">
+      <div class="container-footer">
+        <div class="address">
           <h2>ADDRESS</h2>
           <div style="font-size: small">
             <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI
@@ -364,61 +134,35 @@
             <i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
           </div>
         </div>
-        <div style="text-align: center">
-          <h2 style="color: #000">KAJAMA FIRE</h2>
-          <div class="menu" style="font-size: small">
-            <a href="home.html" style="text-decoration: none; color: #000"
-              >Home</a
-            ><br />
-            <a
-              href="Company-Profil.html"
-              style="text-decoration: none; color: #000"
-              >About Us</a
-            >
-            <br />
-            <a href="Product.html" style="text-decoration: none; color: #000"
-              >Product</a
-            >
-            <br />
-            <a href="Quality.html" style="text-decoration: none; color: #000"
-              >Quality</a
-            ><br />
-            <a href="Equipment.html" style="text-decoration: none; color: #000"
-              >Equipment</a
-            ><br />
-            <a href="Video.html" style="text-decoration: none; color: #000"
-              >Video</a
-            ><br />
-            <a href="Contact-Us.html" style="text-decoration: none; color: #000"
-              >Contact Us</a
-            >
+        <div class="listmenu">
+          <h2>KAJAMA FIRE</h2>
+          <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="Company-Profil.html">About Us</a>
+            <a href="Product.html">Product</a>
+            <a href="Quality.html">Quality</a>
+            <a href="Equipment.html">Equipment</a>
+            <a href="Video.html">Video</a>
+            <a href="Contact-Us.html">Contact Us</a>
           </div>
         </div>
-        <div style="text-align: center">
-          <h2 style="color: #000">QUICK LINK</h2>
-          <div class="linkcepat" style="font-size: small">
-            <a href="Quality.html" style="text-decoration: none; color: #000"
-              >Quality Product</a
-            ><br />
-            <a href="Video.html" style="text-decoration: none; color: #000"
-              >Video</a
-            >
-            <br />
-            <a href="sertifikat.html" style="text-decoration: none; color: #000"
-              >Sertifikat</a
-            >
-            <br />
+        <div class="listlink">
+          <h2>QUICK LINK</h2>
+          <div class="linkcepat">
+            <a href="Quality.html">Quality Product</a>
+            <a href="Video.html">Video</a>
+            <a href="sertifikat.html">Sertifikat</a>
           </div>
         </div>
-        <div class="established" style="text-align: center">
-          <h2 style="color: #000">ESTABLISHED</h2>
+        <div class="established">
+          <h2>ESTABLISHED</h2>
           <img src="asset/ISO/iso2.webp" alt="" />
           <img src="asset/ISO/iso8.webp" alt="" />
-          <img src="asset/ISO/iso11.webp" alt="" /><br />
+          <img src="asset/ISO/iso11.webp" alt="" />
           <img src="asset/logo/kajama-morita.webp" alt="" />
         </div>
       </div>
-      <div class="social" style="text-align: center">
+      <div class="social">
         <a href="https://www.facebook.com/paijo.doang.39"
           ><i class="fa-brands fa-facebook"></i
         ></a>
@@ -433,140 +177,6 @@
         ></a>
       </div>
     </footer>
-    <script>
-      feather.replace();
-    </script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-    <script>
-      var validate = function (e) {
-        var fields = document.querySelectorAll(
-          '.form-container textarea, .form-container input[type="text"]'
-        );
-        var regEx;
-        var removeSpan;
-        var par;
-        var check = false;
-        var val;
-        var errArr = [];
-
-        for (var i = 0; i < fields.length; i++) {
-          if (fields[i].value === "") {
-            if (fields[i].nextElementSibling.classList.contains("error")) {
-              removeSpan = fields[i].nextElementSibling;
-              par = fields[i].parentNode;
-              par.removeChild(removeSpan);
-              fields[i].nextElementSibling.innerHTML =
-                "Hmmm! " + fields[i].placeholder + " is required?";
-              fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
-              check = false;
-              errArr.push(fields[i]);
-            }
-            fields[i].nextElementSibling.innerHTML =
-              "Hmmm! " + fields[i].placeholder + " is required?";
-            fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
-            check = false;
-            errArr.push(fields[i]);
-          } else {
-            // check if message and name values contain valid characters.
-            if (fields[i].id !== "email" && fields[i].id !== "phone") {
-              val = isValidChar(fields[i]);
-              if (val === false) {
-                fields[i].nextElementSibling.innerHTML =
-                  "Are you trying to HACK ME!";
-                fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
-                check = false;
-                errArr.push(fields[i]);
-              } else {
-                fields[i].nextElementSibling.innerHTML = "";
-                fields[i].style.boxShadow = "none";
-                check = true;
-              }
-            }
-
-            if (fields[i].id === "phone") {
-              val = isValidPhone(fields[i]);
-              if (val === false) {
-                fields[i].nextElementSibling.innerHTML =
-                  "Hmmm! Your phone number is not valid?";
-                fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
-                check = false;
-                errArr.push(fields[i]);
-              } else {
-                fields[i].nextElementSibling.innerHTML = "";
-                fields[i].style.boxShadow = "none";
-                check = true;
-              }
-            }
-
-            if (fields[i].id === "email") {
-              val = isValidEmail(fields[i]);
-              if (val === false) {
-                fields[i].nextElementSibling.innerHTML =
-                  "Hmmm! Your email address is not valid?";
-                fields[i].style.boxShadow = "0 0 2px 1px #cc0001";
-                check = false;
-                errArr.push(fields[i]);
-              } else {
-                fields[i].nextElementSibling.innerHTML = "";
-                fields[i].style.boxShadow = "none";
-                check = true;
-              }
-            }
-          }
-        }
-
-        if (check === false) {
-          var count = 0;
-          var toErr = setInterval(function () {
-            var e = errArr[0].offsetTop + -25;
-            var pos = Math.abs(e);
-            if (count < pos) {
-              count++;
-              window.scrollTo(0, count);
-            } else {
-              clearInterval(toErr);
-            }
-          }, 1);
-        }
-
-        return check;
-
-        // Helper functions.
-        function isValidEmail(e) {
-          regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-          var email = e.value;
-          if (!regEx.test(email)) {
-            return false;
-          }
-        }
-
-        function isValidChar(e) {
-          regEx = /^[a-zA-Z@#$%!?^&*()_+\-=\[\]{};':"\\|,.\/? ]*$/;
-          var value = e.value;
-          if (!regEx.test(value)) {
-            return false;
-          }
-        }
-
-        function isValidPhone(e) {
-          regEx = /^[+]?[(]?[+]?\d{2,4}[)]?[-\s]?\d{2,8}[-\s]?\d{2,8}$/;
-          var value = e.value;
-          if (!regEx.test(value)) {
-            return false;
-          }
-        }
-      };
-    </script>
-    <!-- main js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
   </body>
 </html>
