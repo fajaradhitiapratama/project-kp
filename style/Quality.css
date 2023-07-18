@@ -140,7 +140,7 @@ body {
   border-radius: 10px;
   width: 300px;
   height: 380px;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 .mainhome .container .video .card-video h1 {
   font-size: 16px;
