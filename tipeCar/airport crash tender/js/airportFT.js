@@ -1,18 +1,15 @@
-var swiper = new Swiper(".mySwiper", {
-  loop: true,
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".mySwiper2", {
-  loop: true,
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  thumbs: {
-    swiper: swiper,
-  },
-});
+function changeImage(imageNumber) {
+  var imgChange = document.getElementById("img-change");
+
+  var newImageSource = "";
+  if (imageNumber === 1) {
+    newImageSource = "/asset/Mobil/airport crash tender/airport FT/1.webp";
+  } else if (imageNumber === 2) {
+    newImageSource = "/asset/Mobil/airport crash tender/airport FT/2.webp";
+  } else if (imageNumber === 3) {
+    newImageSource = "/asset/Mobil/airport crash tender/airport FT/3.webp";
+  } else if (imageNumber === 4) {
+    newImageSource = "/asset/Mobil/airport crash tender/airport FT/4.webp";
+  }
+  imgChange.src = newImageSource;
+}
