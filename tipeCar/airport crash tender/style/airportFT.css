@@ -145,11 +145,15 @@ body {
   opacity: 0.4;
   transition: 0.5s;
 }
-.mainhome .container .leftside-airport .card-kecil .img-card img:hover {
+/* .mainhome .container .leftside-airport .card-kecil .img-card img:hover {
   transform: scale(1.05);
   opacity: 1;
   outline: 1px solid black;
+} */
+.mainhome .container .leftside-airport .card-kecil .img-card img:active {
+  opacity: 1;
 }
+
 .mainhome .container .rightside-airport {
   width: 640px;
 }
@@ -223,9 +227,16 @@ body {
 .mainhome .preview .card-all .card-preview {
   flex-wrap: wrap;
   display: grid;
+  justify-content: center;
   align-items: center;
   margin: 0 10px;
   box-shadow: 2px 2px 2px rgb(172, 172, 172);
+  justify-items: center;
+}
+.mainhome .preview .card-all a {
+  text-align: center;
+  text-decoration: none;
+  justify-items: center;
 }
 .mainhome .preview .card-all .card-preview img {
   width: 300px;
@@ -236,7 +247,15 @@ body {
 .mainhome .preview .card-all .card-preview img:hover {
   transform: scale(1.05);
   box-shadow: 2px 2px 2px rgb(172, 172, 172);
+  color: var(--primary);
 }
+.card-preview h3 {
+  color: #000;
+}
+.card-preview h3:hover {
+  color: var(--primary);
+}
+
 /* .mainhome .preview .card-all .card-preview {
 } */
 
