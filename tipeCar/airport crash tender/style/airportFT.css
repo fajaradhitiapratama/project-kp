@@ -145,13 +145,10 @@ body {
   opacity: 0.4;
   transition: 0.5s;
 }
-/* .mainhome .container .leftside-airport .card-kecil .img-card img:hover {
+.mainhome .container .leftside-airport .card-kecil .img-card img:hover {
   transform: scale(1.05);
   opacity: 1;
   outline: 1px solid black;
-} */
-.mainhome .container .leftside-airport .card-kecil .img-card img:active {
-  opacity: 1;
 }
 
 .mainhome .container .rightside-airport {

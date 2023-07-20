@@ -1,203 +1,212 @@
 <!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Swiper demo</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIRPORT FIRE TRUCK | Kajama Fire</title>
+
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
     />
-    <!-- Link Swiper's CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
     />
 
-    <!-- Demo styles -->
-    <style>
-      html,
-      body {
-        position: relative;
-        height: 100%;
-      }
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="style/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
+    />
 
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      }
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/airportFT.css" />
 
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      body {
-        background: #000;
-        color: #000;
-      }
-
-      .swiper {
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .swiper-slide {
-        background-size: cover;
-        background-position: center;
-      }
-
-      .mySwiper2 {
-        height: 80%;
-        width: 100%;
-      }
-
-      .mySwiper {
-        height: 20%;
-        box-sizing: border-box;
-        padding: 10px 0;
-      }
-
-      .mySwiper .swiper-slide {
-        width: 25%;
-        height: 100%;
-        opacity: 0.4;
-      }
-
-      .mySwiper .swiper-slide-thumb-active {
-        opacity: 1;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 80%;
-        height: 80%;
-        object-fit: cover;
-      }
-    </style>
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <script src="https://kit.fontawesome.com/ff4f981f32.js"></script>
   </head>
-
   <body>
-    <!-- Swiper -->
-
-    <div
-      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-      class="swiper mySwiper2"
-    >
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="/home.html"
+        ><img src="/asset/logo/kajama-logo.webp" alt="kajama-logo"
+      /></a>
+      <div class="info">
+        <a
+          href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+          ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+        </a>
+        <a href="mailto:info@kajama.net"
+          ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
+        >
+      </div>
+      <div class="navbar-nav">
+        <a class="home-nav" href="/home.html">Home</a>
+        <a class="about-nav" href="/Company-Profil.html">About Us</a>
+        <a class="product-nav" href="/Product.html">Product</a>
+        <a class="quality-nav" href="/Quality.html">Quality</a>
+        <a class="equipment-nav" href="/Equipment.html">Equipment</a>
+        <a class="video-nav" href="/Video.html">Video</a>
+        <a class="contact-nav" href="/Contact-Us.html">Contact Us</a>
+      </div>
+    </nav>
+    <!-- Main Mobil -->
+    <!-- Main Home -->
+    <section class="mainhome">
+      <div class="container">
+        <div class="leftside-airport">
+          <div class="card-besar">
+            <img
+              id="img-change"
+              src="/asset/Mobil/airport crash tender/airport FT/1.webp"
+              alt=""
+            />
+          </div>
+          <div class="card-kecil">
+            <div class="img-card">
+              <img
+                id="img-1"
+                src="/asset/Mobil/airport crash tender/airport FT/1.webp"
+                alt=""
+                onclick="changeImage(1)"
+                class="active"
+              />
+            </div>
+            <div class="img-card">
+              <img
+                id="img-2"
+                src="/asset/Mobil/airport crash tender/airport FT/2.webp"
+                alt=""
+                onclick="changeImage(2)"
+              />
+            </div>
+            <div class="img-card">
+              <img
+                id="img-3"
+                src="/asset/Mobil/airport crash tender/airport FT/3.webp"
+                alt=""
+                onclick="changeImage(3)"
+              />
+            </div>
+            <div class="img-card">
+              <img
+                id="img-4"
+                src="/asset/Mobil/airport crash tender/airport FT/4.webp"
+                alt=""
+                onclick="changeImage(4)"
+              />
+            </div>
+          </div>
         </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+        <div class="rightside-airport">
+          <h4>AIRPORT CRASH TENDER</h4>
+          <h1>AIRPORT FIRE TRUCK</h1>
+          <div class="spesifikasi">
+            <h4>Spesification</h4>
+            <p>Mobil ini di desain ....</p>
+          </div>
+          <div class="request">
+            <a href=""><i class="fa-solid fa-phone"></i> REQUEST</a>
+          </div>
+          <div class="download">
+            <a href=""><i class="fa-solid fa-circle-down"></i> DOWNLOAD</a>
+          </div>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-    <div thumbsSlider="" class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+      <div class="preview">
+        <h1>MORE <span>PRODUCT</span></h1>
+        <div class="card-all">
+          <a href="/tipeCar/airport crash tender/airportFT.html"
+            ><div class="card-preview">
+              <img src="/asset/Mobil/airport crash tender/1.webp" alt="" />
+              <h3>AIRPORT FIRE TRUCK</h3>
+            </div></a
+          >
+          <a href="/tipeCar/airport crash tender/ravin.html"
+            ><div class="card-preview">
+              <img src="/asset/Mobil/airport crash tender/2.webp" alt="" />
+              <h3>RAVIN INTERVENTION VEHICLE</h3>
+            </div></a
+          >
+          <a href="/tipeCar/airport crash tender/type3.html"
+            ><div class="card-preview">
+              <img src="/asset/Mobil/airport crash tender/3.webp" alt="" />
+              <h3>TYPE III</h3>
+            </div></a
+          >
         </div>
       </div>
-    </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-      var swiper2 = new Swiper(".mySwiper2", {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-          swiper: swiper,
-        },
-      });
-    </script>
+    </section>
+    <footer>
+      <div class="container-footer">
+        <div class="address">
+          <h2>ADDRESS</h2>
+          <div style="font-size: small">
+            <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI
+            MEGAH PRAKOSO<br />Griya Bukit Jaya Blok O.4/44, Gunung Putri,Bogor
+            <br />
+            <i class="fa-regular fa-envelope"></i> info@kajama.net <br />
+            <i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
+          </div>
+        </div>
+        <div class="listmenu">
+          <h2>KAJAMA FIRE</h2>
+          <div class="menu">
+            <a href="/home.html">Home</a>
+            <a href="/Company-Profil.html">About Us</a>
+            <a href="/Product.html">Product</a>
+            <a href="/Quality.html">Quality</a>
+            <a href="/Equipment.html">Equipment</a>
+            <a href="/Video.html">Video</a>
+            <a href="/Contact-Us.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="listlink">
+          <h2>QUICK LINK</h2>
+          <div class="linkcepat">
+            <a href="/Quality.html">Quality Product</a>
+            <a href="/Video.html">Video</a>
+            <a href="/sertifikat.html">Sertifikat</a>
+          </div>
+        </div>
+        <div class="established">
+          <h2>ESTABLISHED</h2>
+          <img src="/asset/ISO/iso2.webp" alt="" />
+          <img src="/asset/ISO/iso8.webp" alt="" />
+          <img src="/asset/ISO/iso11.webp" alt="" />
+          <img src="/asset/logo/kajama-morita.webp" alt="" />
+        </div>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/paijo.doang.39"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.youtube.com/channel/UCuY7S43GxzswhTMe0_DalZA"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://www.instagram.com/cucukdokterpemadam/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/cucuk-kajama-026b32146/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
+    <script src="js/airportFT.js"></script>
   </body>
 </html>
