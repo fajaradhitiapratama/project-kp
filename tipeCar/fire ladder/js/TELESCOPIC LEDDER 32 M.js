@@ -3,13 +3,17 @@ function changeImage(imageNumber) {
 
   var newImageSource = "";
   if (imageNumber === 1) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/1.webp";
+    newImageSource =
+      "/asset/Mobil/FL/FIRE LEDDER/TELE 32M/TELESCOPIC 32  M.png";
   } else if (imageNumber === 2) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/2.webp";
+    newImageSource =
+      "/asset/Mobil/FL/FIRE LEDDER/TELE 32M/TELESCOPIC 32  M3.png";
   } else if (imageNumber === 3) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/3.webp";
+    newImageSource =
+      "/asset/Mobil/FL/FIRE LEDDER/TELE 32M/TELESCOPIC 32  M4.png";
   } else if (imageNumber === 4) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/4.webp";
+    newImageSource =
+      "/asset/Mobil/FL/FIRE LEDDER/TELE 32M/TELESCOPIC 32  M5.png";
   }
   imgChange.src = newImageSource;
 }
