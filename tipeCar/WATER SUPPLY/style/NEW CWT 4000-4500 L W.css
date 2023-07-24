@@ -1,0 +1,310 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+:root {
+  --primary: #ff0303;
+  --bg: #ffffff;
+  --bgnav: #838383;
+  --blck: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 65vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  margin: 0;
+}
+
+/* navbar */
+.info {
+  display: flex;
+  font-size: 10px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin: 1rem 1rem 2rem;
+}
+.info a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 15px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--blck);
+  border-bottom: 7px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-nav a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+.navbar,
+.navbar-nav a:hover {
+  color: var(--primary);
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+.navbar .navbar-nav .product-nav {
+  color: var(--primary);
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+/* main home */
+.mainhome {
+  display: grid;
+  margin-top: 8%;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+}
+
+.mainhome .container {
+  display: flex;
+  color: black;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.mainhome .container .leftside-airport {
+  width: 850px;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.mainhome .container .leftside-airport .card-besar {
+  border-radius: 15px;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  width: 650px;
+  height: 400px;
+  border: 0.5px solid rgb(212, 210, 210);
+  box-shadow: 2px 3px 3px rgb(212, 210, 210);
+  margin-bottom: 10px;
+  background: linear-gradient(var(--primary), white);
+}
+.mainhome .container .leftside-airport .card-besar img {
+  box-shadow: 1px 1px 1px rgb(212, 210, 210);
+  border-radius: 10px;
+  text-align: center;
+  width: 650px;
+  height: 400px;
+  cursor: pointer;
+  object-fit: cover;
+}
+.mainhome .container .leftside-airport .card-kecil {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.mainhome .container .leftside-airport .card-kecil .img-card img {
+  width: 150px;
+  height: 100px;
+  margin: 0 5px;
+  border: 1px solid rgb(212, 210, 210);
+  box-shadow: 2px 3px 3px rgb(212, 210, 210);
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.mainhome .container .leftside-airport .card-kecil .img-card img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  outline: 1px solid black;
+}
+
+.mainhome .container .rightside-airport {
+  width: 640px;
+}
+.mainhome .container .rightside-airport h1 {
+  margin-top: -6px;
+  color: var(--primary);
+  text-shadow: 1px 1px black;
+  font-size: 25px;
+}
+.mainhome .container .rightside-airport h4 {
+  font-size: 15px;
+}
+.mainhome .container .rightside-airport .spesifikasi {
+  margin-top: 5px;
+}
+.mainhome .container .rightside-airport .spesifikasi h4 {
+  font-size: 14px;
+}
+.mainhome .container .rightside-airport .spesifikasi p {
+  font-size: 12px;
+  font-weight: 450;
+  border-bottom: 2px solid rgb(212, 210, 210);
+  margin-bottom: 10px;
+}
+.mainhome .container .rightside-airport .request {
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+  margin-top: 5px;
+  border: 2px solid black;
+  background-color: #000;
+}
+.mainhome .container .rightside-airport .request a {
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 2px 5px;
+  margin-right: 5px;
+
+  color: white;
+}
+.mainhome .container .rightside-airport .download {
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+  margin-top: 10px;
+  border: 2px solid black;
+  background-color: #000;
+}
+.mainhome .container .rightside-airport .download a {
+  text-decoration: none;
+  padding: 2px 5px;
+  margin-right: 5px;
+  color: white;
+}
+.mainhome .preview h1 {
+  text-align: center;
+  text-shadow: 1px 1px rgb(172, 172, 172);
+}
+.mainhome .preview h1 span {
+  color: var(--primary);
+}
+.mainhome .preview {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+}
+.mainhome .preview .card-all {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.mainhome .preview .card-all .card-preview {
+  flex-wrap: wrap;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  box-shadow: 2px 2px 2px rgb(172, 172, 172);
+  justify-items: center;
+}
+.mainhome .preview .card-all a {
+  text-align: center;
+  text-decoration: none;
+  justify-items: center;
+}
+.mainhome .preview .card-all .card-preview img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+.mainhome .preview .card-all .card-preview img:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 2px rgb(172, 172, 172);
+  color: var(--primary);
+}
+.card-preview h3 {
+  color: #000;
+}
+.card-preview h3:hover {
+  color: var(--primary);
+}
+
+/* .mainhome .preview .card-all .card-preview {
+} */
+
+/* footer */
+.container-footer {
+  color: #000;
+  border-top: 1px solid #000;
+  margin: 3%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 100px;
+}
+.container-footer .address {
+  color: black;
+  text-align: center;
+}
+.container-footer h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.container-footer .listmenu .menu a,
+.container-footer .listlink .linkcepat a {
+  display: grid;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+}
+.container-footer .listmenu .menu a:hover,
+.container-footer .listlink .linkcepat a:hover {
+  font-size: 15px;
+  font-weight: bold;
+}
+.container-footer .established {
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social {
+  text-align: center;
+}
+.social a {
+  display: inline-block;
+  margin: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #000;
+}
+.social a i {
+  font-size: 35px;
+}
+.social a:hover {
+  color: var(--primary);
+}
