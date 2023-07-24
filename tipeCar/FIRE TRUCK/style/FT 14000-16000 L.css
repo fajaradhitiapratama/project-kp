@@ -247,6 +247,7 @@ body {
   color: var(--primary);
 }
 .card-preview h3 {
+  font-size: 16px;
   color: #000;
 }
 .card-preview h3:hover {
