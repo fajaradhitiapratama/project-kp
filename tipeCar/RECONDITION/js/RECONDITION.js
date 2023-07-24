@@ -3,13 +3,11 @@ function changeImage(imageNumber) {
 
   var newImageSource = "";
   if (imageNumber === 1) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/1.webp";
+    newImageSource = "/asset/Mobil/recondition/RECON 3/RR2.png";
   } else if (imageNumber === 2) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/2.webp";
+    newImageSource = "/asset/Mobil/recondition/RECON 3/RR3.png";
   } else if (imageNumber === 3) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/3.webp";
-  } else if (imageNumber === 4) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/4.webp";
+    newImageSource = "/asset/Mobil/recondition/RECON 3/RR1.png";
   }
   imgChange.src = newImageSource;
 }
