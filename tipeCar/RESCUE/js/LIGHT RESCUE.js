@@ -3,13 +3,11 @@ function changeImage(imageNumber) {
 
   var newImageSource = "";
   if (imageNumber === 1) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/1.webp";
+    newImageSource =
+      "/asset/Mobil/rescue/RESCUE/LIGHT RESCUE/light_rescue_2-ccf47-2563_568-t598_26.webp";
   } else if (imageNumber === 2) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/2.webp";
-  } else if (imageNumber === 3) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/3.webp";
-  } else if (imageNumber === 4) {
-    newImageSource = "/asset/Mobil/airport crash tender/airport FT/4.webp";
+    newImageSource =
+      "/asset/Mobil/rescue/RESCUE/LIGHT RESCUE/light_rescue_3-d30b9-2563_697-t598_26.webp";
   }
   imgChange.src = newImageSource;
 }
