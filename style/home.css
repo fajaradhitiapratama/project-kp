@@ -1409,14 +1409,17 @@ footer {
   }
 }
 
-/* phone */
+/* phone 13*/
 @media screen and (max-width: 450px) {
+  body {
+    max-width: 450px;
+  }
   nav {
     width: 100%;
     flex-wrap: wrap;
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 99999;
   }
   .main-mobil .container-mobil {
     margin-top: 10%;
@@ -1451,7 +1454,7 @@ footer {
     align-items: center;
   }
   .leftside p {
-    width: 400px;
+    width: 350px;
     display: flex;
     font-size: small;
     padding-top: 1px;
@@ -1568,3 +1571,13 @@ footer {
     margin-bottom: 10px;
   }
 }
+/* Iphone 12 */
+@media screen and (max-width: 390px) {
+  body {
+    max-width: 390px;
+  }
+  nav {
+    position: fixed;
+  }
+}
+/* Iphone 11 */
