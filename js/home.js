@@ -1,5 +1,5 @@
 // slide
-var swiper = new Swiper(".slide-container-mobil", {
+var swiper1 = new Swiper(".slide-container-mobil", {
   slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
@@ -18,7 +18,7 @@ var swiper = new Swiper(".slide-container-mobil", {
   },
 });
 // certif
-var swiper = new Swiper(".slide-container-certif", {
+swiper2 = new Swiper(".slide-container-certif", {
   slidesPerView: 5,
   spaceBetween: 20,
   loop: true,
@@ -26,9 +26,9 @@ var swiper = new Swiper(".slide-container-certif", {
     delay: 2500,
     disableOnInteraction: false,
   },
-  centerSlide: "true",
-  fade: "true",
-  grabCursor: "true",
+  centerSlide: true,
+  fade: true,
+  grabCursor: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -39,27 +39,43 @@ var swiper = new Swiper(".slide-container-certif", {
     prevEl: ".swiper-button-prev",
   },
 });
+
 // marketing
-var swiper = new Swiper(".slide-content-marketing", {
-  slidesPerView: 3,
-  spaceBetween: 25,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  centerSlide: "true",
-  fade: "true",
-  grabCursor: "true",
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
+var swiper;
+function initSwiper() {
+  swiper = new Swiper(".slide-content-marketing", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    centerSlide: true,
+    fade: true,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+  });
+}
+function updateSwiper() {
+  if (window.matchMedia("(max-width: 450px)").matches) {
+    swiper.params.slidesPerView = 2;
+  } else {
+    swiper.params.slidesPerView = 3;
+  }
+  swiper.update();
+}
+initSwiper();
+window.addEventListener("resize", function () {
+  updateSwiper();
 });
+updateSwiper();
 
 //support
-// Get the DOM elements for the image carousel
 const wrapper = document.querySelector(".wrapper-support"),
   carousel = document.querySelector(".carousel-support"),
   images = document.querySelectorAll("img"),
@@ -90,7 +106,7 @@ wrapper.addEventListener("mouseover", () => clearInterval(intervalId));
 wrapper.addEventListener("mouseleave", autoSlide);
 
 // chassis
-var swiper = new Swiper(".slide-container-chassis", {
+var swiper3 = new Swiper(".slide-container-chassis", {
   slidesPerView: 5,
   spaceBetween: 20,
   loop: true,
