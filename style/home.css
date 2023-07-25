@@ -1418,8 +1418,8 @@ footer {
     top: 0;
     z-index: 9999;
   }
-  .container-mobil {
-    top: 50px;
+  .main-mobil .container-mobil {
+    margin-top: 10%;
   }
   /* main mobil */
   .card-mobil .image-box {
