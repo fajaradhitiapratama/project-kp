@@ -281,6 +281,9 @@ footer {
     margin-top: 2%;
   }
   /* main home */
+  .mainhome .container {
+    display: grid;
+  }
   .mainhome .container .card {
     display: flex;
     flex-wrap: wrap;
@@ -296,7 +299,12 @@ footer {
     height: 150px;
   }
   .mainhome .container .video {
-    width: 300px;
+    display: grid;
+    width: 800px;
+    justify-content: center;
+  }
+  .mainhome .container .video .card-video {
+    display: flex;
   }
   .mainhome .container .video video {
     width: 250px;
@@ -310,36 +318,67 @@ footer {
   }
 }
 @media screen and (max-width: 428px) {
+  nav {
+    width: 100%;
+  }
   .mainhome h1 {
     margin-top: 10%;
   }
-  /* main home */
+  .mainhome {
+    width: 380px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8%;
+    justify-content: center;
+  }
+  .mainhome h1 {
+    text-align: center;
+    text-shadow: 1.2px 1.3px rgb(212, 210, 210);
+  }
+  .mainhome h1 span {
+    color: var(--primary);
+  }
+  .mainhome .container {
+    display: grid;
+    width: 380px;
+    margin-right: 5px;
+  }
   .mainhome .container .card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
   .mainhome .container .card .card-img {
-    width: 180px;
-    height: 130px;
+    width: 150px;
+    height: 110px;
   }
   .mainhome .container .card .card-img img {
-    width: 160px;
-    height: 70px;
+    width: 130px;
+    height: 65px;
   }
   .mainhome .container .video {
-    width: 180px;
+    width: 370px;
+    display: grid;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+  }
+  .mainhome .container .video .card-video {
+    display: flex;
   }
   .mainhome .container .video video {
-    width: 170px;
-    height: 280px;
+    box-shadow: 4px 4px 4px black;
+    border-radius: 10px;
+    width: 150px;
+    height: 190px;
+    object-fit: cover;
   }
-  .mainhome .container .card .card-img h4 {
+  .mainhome .container .video h1 {
     font-size: 12px;
   }
-  .container-footer {
-    grid-gap: 50px;
+  .mainhome .container .card .card-img h4 {
+    font-size: 10px;
   }
   footer {
     display: grid;
