@@ -1410,7 +1410,7 @@ footer {
 }
 
 /* phone 13*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 428px) {
   nav {
     width: 100%;
     flex-wrap: wrap;
@@ -1439,26 +1439,36 @@ footer {
     background: linear-gradient(black, white);
     margin-top: 8%;
     margin-bottom: 0%;
-    width: 450px;
+    width: 428px;
     padding: 40px 0;
   }
   /* main home */
+  .mainhome {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-start;
+  }
   .leftside {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     flex-direction: column;
     align-items: center;
+    padding-right: 0px;
   }
   .leftside p {
-    width: 350px;
+    width: 370px;
     display: flex;
     font-size: small;
     padding-top: 1px;
     text-align: justify;
   }
   .mainhome .leftside p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .container-certif {
     border-radius: 10px;
@@ -1487,7 +1497,6 @@ footer {
     flex-wrap: wrap;
     gap: 50px 20px;
     padding-left: 20px;
-    padding-right: 20px;
     padding-bottom: 40px;
     cursor: pointer;
   }
@@ -1533,7 +1542,7 @@ footer {
     background-color: #fff;
     margin-top: 0;
     margin-bottom: 0%;
-    max-width: 430px;
+    max-width: 410px;
     width: 100%;
     padding: 10px 0;
   }
@@ -1569,13 +1578,13 @@ footer {
   }
 }
 /* Iphone 12 */
-@media screen and (max-width: 390px) {
+/* @media screen and (max-width: 390px) {
   nav {
     position: fixed;
     top: 0;
   }
   /* main mobil */
-  .card-mobil .image-box {
+/* .card-mobil .image-box {
     height: 80px;
   }
   .card-mobil .image-box img {
@@ -1595,4 +1604,16 @@ footer {
     width: 370px;
     padding: 40px 0;
   }
-}
+  .mainhome .leftside {
+    width: 380px;
+  }
+  .mainhome .leftside p {
+    display: flex;
+    font-size: small;
+    padding-top: 1px;
+    text-align: justify;
+  }
+  .mainhome .leftside p {
+    font-size: 12px;
+  }
+} */
