@@ -161,7 +161,6 @@ footer {
 }
 .container-footer {
   color: #000;
-
   margin: 3%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -256,7 +255,7 @@ footer {
   #click:checked ~ ul li a {
     margin-left: 0px;
   }
-  nav ul li a.quality-nav-active,
+  nav ul li a.video-nav-active,
   nav ul li a:hover {
     color: var(--primary);
   }
@@ -270,115 +269,124 @@ footer {
   nav ul li a:hover::after {
     transform: scaleX(0.1);
   }
-  .mainhome .container .card .card-img,
-  .mainhome .container .video video {
-    cursor: pointer;
+  .mainhome .container {
+    display: grid;
+  }
+  .mainhome h1 {
+    font-size: 25px;
+  }
+  .mainhome .container .video {
+    width: 1100px;
+    display: grid;
+    justify-content: center;
+  }
+  .mainhome .container .video .card-video {
+    display: flex;
   }
 }
 /* tablet */
-@media screen and (max-width: 820px) {
-  .mainhome h1 {
-    margin-top: 2%;
-  }
-  /* main home */
+@media screen and (max-width: 1024px) {
   .mainhome .container {
     display: grid;
   }
   .mainhome .container .card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   .mainhome .container .card .card-img {
-    width: 200px;
-    height: 210px;
+    box-shadow: 4px 2px 2px black;
+    border-radius: 15px;
+    padding: 10px 10px;
+    margin: 10px;
+    background: linear-gradient(red, white);
+    text-align: center;
+    font-weight: 550;
   }
   .mainhome .container .card .card-img img {
-    width: 180px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
   }
   .mainhome .container .video {
-    display: grid;
-    width: 800px;
     justify-content: center;
-  }
-  .mainhome .container .video .card-video {
+    width: 960px;
     display: flex;
+    color: var(--primary);
+    font-size: 13px;
+    text-shadow: 1.2px 1.3px #000000;
+    text-align: center;
+    font-weight: 500;
+    flex-wrap: wrap;
   }
   .mainhome .container .video video {
-    width: 250px;
-    height: 280px;
+    box-shadow: 4px 4px 4px black;
+    border-radius: 10px;
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
   }
-  .mainhome .container .card .card-img h4 {
-    font-size: 12px;
-  }
+
   .container-footer {
-    grid-gap: 50px;
+    gap: 50px;
   }
 }
+/* hp */
 @media screen and (max-width: 428px) {
-  nav {
-    width: 100%;
-  }
   .mainhome h1 {
-    margin-top: 10%;
-  }
-  .mainhome {
-    width: 380px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 8%;
-    justify-content: center;
-  }
-  .mainhome h1 {
-    text-align: center;
-    text-shadow: 1.2px 1.3px rgb(212, 210, 210);
-  }
-  .mainhome h1 span {
-    color: var(--primary);
+    margin-top: 12%;
   }
   .mainhome .container {
     display: grid;
-    width: 380px;
-    margin-right: 5px;
   }
   .mainhome .container .card {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
   }
   .mainhome .container .card .card-img {
-    width: 150px;
-    height: 110px;
+    box-shadow: 4px 2px 2px black;
+    border-radius: 15px;
+    padding: 10px 10px;
+    margin: 10px;
+    background: linear-gradient(red, white);
+    text-align: center;
+    font-weight: 550;
   }
   .mainhome .container .card .card-img img {
-    width: 130px;
-    height: 65px;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
   }
   .mainhome .container .video {
-    width: 370px;
+    width: 380px;
     display: grid;
-    flex-wrap: nowrap;
-    justify-content: center;
+    color: var(--primary);
+    font-size: 13px;
+    text-shadow: 1.2px 1.3px #000000;
     text-align: center;
     font-weight: 500;
-  }
-  .mainhome .container .video .card-video {
-    display: flex;
+    flex-wrap: wrap;
   }
   .mainhome .container .video video {
     box-shadow: 4px 4px 4px black;
     border-radius: 10px;
     width: 150px;
-    height: 190px;
+    height: 280px;
     object-fit: cover;
   }
-  .mainhome .container .video h1 {
-    font-size: 12px;
+  .mainhome .container .video .card-video h1 {
+    font-size: 16px;
   }
   .mainhome .container .card .card-img h4 {
-    font-size: 10px;
+    font-size: 14px;
+  }
+  .video-display {
+    margin: 10px;
   }
   footer {
     display: grid;
