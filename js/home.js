@@ -20,7 +20,7 @@ function initSwiper1() {
   });
 }
 function updateSwiper1() {
-  if (window.matchMedia("(max-width: 428px)").matches) {
+  if (window.matchMedia("(max-width: 431px)").matches) {
     swiper1.params.slidesPerView = 2;
   } else {
     swiper1.params.slidesPerView = 3;
