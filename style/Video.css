@@ -304,7 +304,7 @@ footer {
   }
 }
 /* hp */
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 431px) {
   .mainhome h1 {
     font-size: 20px;
     margin-top: 13%;

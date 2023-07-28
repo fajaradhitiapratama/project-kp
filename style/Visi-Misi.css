@@ -478,7 +478,8 @@ footer {
 /* hp */
 @media screen and (max-width: 450px) {
   body {
-    width: 100%;
+    display: grid;
+    justify-items: center;
   }
   .main-mobil {
     display: flex;
@@ -627,6 +628,15 @@ footer {
   }
   .rightside-main .container-tulisan .card-tulisan {
     padding: 10px;
+  }
+  .rightside-main .container-tulisan .card-tulisan p {
+    font-weight: 400;
+  }
+  .rightside-main .container-tulisan .card-tulisan ol,
+  .rightside-main .container-tulisan .card-tulisan ul {
+    text-align: justify;
+    font-weight: 400;
+    padding-left: 15px;
   }
 
   /* footer */

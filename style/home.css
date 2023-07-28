@@ -1410,7 +1410,7 @@ footer {
 }
 
 /* phone 13*/
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 431px) {
   body {
     display: grid;
     justify-items: center;

@@ -478,7 +478,8 @@ footer {
 /* hp */
 @media screen and (max-width: 450px) {
   body {
-    width: 100%;
+    display: grid;
+    justify-items: center;
   }
   .main-mobil {
     display: flex;
@@ -486,12 +487,12 @@ footer {
     margin-top: 21%;
   }
   .main-mobil .container-mobil .card-mobil {
-    width: 390px;
+    width: 380px;
+    padding: 0px;
   }
-
   .main-mobil .container-mobil .card-mobil img {
-    width: 390px;
-    height: 140px;
+    width: 380px;
+    height: 160px;
   }
   .mainhome {
     background-color: rgb(255, 255, 255);
@@ -628,6 +629,15 @@ footer {
   .rightside-main .container-tulisan .card-tulisan {
     padding: 10px;
   }
+  .rightside-main .container-tulisan .card-tulisan p {
+    font-weight: 400;
+  }
+  .rightside-main .container-tulisan .card-tulisan ol,
+  .rightside-main .container-tulisan .card-tulisan ul {
+    text-align: justify;
+    font-weight: 400;
+    padding-left: 15px;
+  }
 
   /* footer */
   footer {
@@ -647,6 +657,4 @@ footer {
   .container-footer .established {
     margin-bottom: 10px;
   }
-}
-@media screen and (max-width: 390px) {
 }
