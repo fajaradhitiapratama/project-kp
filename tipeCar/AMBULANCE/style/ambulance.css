@@ -688,10 +688,11 @@ footer {
   .mainhome .preview .card-all {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
   }
   .mainhome .preview .card-all .card-preview {
     flex-wrap: wrap;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     margin: 0 10px;
