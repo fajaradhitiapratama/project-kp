@@ -22,67 +22,70 @@ body {
 }
 
 /* navbar */
-.info {
+nav {
   display: flex;
-  font-size: 10px;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  margin: 1rem 1rem 2rem;
-}
-.info a {
-  color: #fff;
-  text-decoration: none;
-  padding-right: 10px;
-  padding-left: 15px;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  background: #000000;
   align-items: center;
-  padding: 15px;
-  background-color: var(--blck);
-  border-bottom: 7px solid var(--primary);
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
+  border-bottom: 7px solid var(--primary);
 }
-.navbar .navbar-nav a {
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: #f2f2f2;
   text-decoration: none;
-  color: #ffffff;
-  display: inline-block;
-  font-size: 1.3rem;
-  margin: 0 1rem;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-left: 15px;
 }
-.navbar .navbar-logo span {
-  color: var(--primary);
-}
-.navbar,
-.navbar-nav a:hover {
-  color: var(--primary);
-}
-.navbar .navbar-nav a::after {
+nav ul li a::after {
   content: "";
   display: block;
-  padding-bottom: 0.1rem;
   border-bottom: 0.1rem solid var(--primary);
   transform: scaleX(0);
   transition: 0.2s linear;
 }
-.navbar .navbar-nav .product-nav {
-  color: var(--primary);
-}
-.navbar .navbar-nav a:hover::after {
+nav ul li a:hover::after {
   transform: scaleX(0.5);
 }
-.navbar .navbar-extra a {
-  color: #fff;
-  margin: 0 0.5rem;
-}
-.navbar .navbar-extra a:hover {
+nav ul li a.product-nav-active,
+nav ul li a:hover {
   color: var(--primary);
+  /* background: var(--primary); */
+}
+nav .menu-navbar i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+.navbar .logo-navbar img {
+  width: 180px;
+}
+.navbar .system-mode i {
+  color: white;
 }
 /* main home */
 .mainhome {
@@ -92,7 +95,25 @@ body {
   background-color: rgb(255, 255, 255);
   flex-direction: column;
 }
-
+.mainhome .judul {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px 20px;
+}
+.mainhome .judul a {
+  color: black;
+  margin: 0 2px;
+  border-radius: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  font-weight: 550;
+}
+.mainhome .judul a:hover {
+  background-color: red;
+  color: white;
+}
 .mainhome .container {
   display: flex;
   color: black;
@@ -100,7 +121,8 @@ body {
   flex-wrap: wrap;
 }
 .mainhome .container .leftside-airport {
-  width: 850px;
+  margin: 0 20px;
+  width: 650px;
   display: grid;
   text-align: center;
   justify-content: center;
@@ -175,15 +197,15 @@ body {
   border-bottom: 2px solid rgb(212, 210, 210);
   margin-bottom: 10px;
 }
-.mainhome .container .rightside-airport .request {
+.mainhome .container .rightside-airport .link .request {
   border-radius: 10px;
   text-align: center;
   width: 150px;
-  margin-top: 5px;
+  margin-top: 10px;
   border: 2px solid black;
   background-color: #000;
 }
-.mainhome .container .rightside-airport .request a {
+.mainhome .container .rightside-airport .link .request a {
   border-radius: 10px;
   text-decoration: none;
   padding: 2px 5px;
@@ -191,7 +213,7 @@ body {
 
   color: white;
 }
-.mainhome .container .rightside-airport .download {
+.mainhome .container .rightside-airport .link .download {
   border-radius: 10px;
   text-align: center;
   width: 150px;
@@ -253,13 +275,13 @@ body {
   color: var(--primary);
 }
 
-/* .mainhome .preview .card-all .card-preview {
-} */
-
 /* footer */
+footer {
+  border-top: 1px solid #000;
+  margin-top: 3%;
+}
 .container-footer {
   color: #000;
-  border-top: 1px solid #000;
   margin: 3%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -273,6 +295,10 @@ body {
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+}
+.container-footer .address a {
+  text-decoration: none;
+  color: black;
 }
 .container-footer .listmenu .menu a,
 .container-footer .listlink .linkcepat a {
@@ -307,4 +333,409 @@ body {
 }
 .social a:hover {
   color: var(--primary);
+}
+
+/* media queris*/
+@media screen and (max-width: 1200px) {
+  nav {
+    padding: 0 40px 0 50px;
+    width: 100%;
+  }
+  nav .menu-navbar i {
+    display: block;
+  }
+  #click:checked ~ .menu-navbar i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.product-nav-active,
+  nav ul li a:hover {
+    color: var(--primary);
+  }
+  nav ul li a::after {
+    content: "";
+    display: block;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  nav ul li a:hover::after {
+    transform: scaleX(0.1);
+  }
+  /* mainhome */
+  .mainhome .container {
+    display: flex;
+    color: black;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .mainhome .container .leftside-airport {
+    margin: 0 20px;
+    width: 450px;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  .mainhome .container .leftside-airport .card-besar {
+    border-radius: 15px;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 450px;
+    height: 300px;
+    border: 0.5px solid rgb(212, 210, 210);
+    box-shadow: 2px 3px 3px rgb(212, 210, 210);
+    margin-bottom: 10px;
+    background: linear-gradient(var(--primary), white);
+  }
+  .mainhome .container .leftside-airport .card-besar img {
+    box-shadow: 1px 1px 1px rgb(212, 210, 210);
+    border-radius: 10px;
+    text-align: center;
+    width: 450px;
+    height: 300px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  .mainhome .container .leftside-airport .card-kecil {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .mainhome .container .leftside-airport .card-kecil .img-card img {
+    width: 120px;
+    height: 100px;
+    margin: 0 5px;
+    border: 1px solid rgb(212, 210, 210);
+    box-shadow: 2px 3px 3px rgb(212, 210, 210);
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: 0.5s;
+  }
+  .mainhome .container .leftside-airport .card-kecil .img-card img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    outline: 1px solid black;
+  }
+
+  .mainhome .container .rightside-airport {
+    width: 640px;
+  }
+  .mainhome .container .rightside-airport h1 {
+    margin-top: -6px;
+    color: var(--primary);
+    text-shadow: 1px 1px black;
+    font-size: 25px;
+  }
+  .mainhome .container .rightside-airport h4 {
+    font-size: 15px;
+  }
+  .mainhome .container .rightside-airport .spesifikasi {
+    margin-top: 5px;
+  }
+  .mainhome .container .rightside-airport .spesifikasi h4 {
+    font-size: 14px;
+  }
+  .mainhome .container .rightside-airport .spesifikasi p {
+    font-size: 12px;
+    font-weight: 450;
+    border-bottom: 2px solid rgb(212, 210, 210);
+    margin-bottom: 10px;
+  }
+  .mainhome .container .rightside-airport .request {
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    margin-top: 5px;
+    border: 2px solid black;
+    background-color: #000;
+  }
+  .mainhome .container .rightside-airport .request a {
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 2px 5px;
+    margin-right: 5px;
+
+    color: white;
+  }
+  .mainhome .container .rightside-airport .download {
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    margin-top: 10px;
+    border: 2px solid black;
+    background-color: #000;
+  }
+  .mainhome .container .rightside-airport .download a {
+    text-decoration: none;
+    padding: 2px 5px;
+    margin-right: 5px;
+    color: white;
+  }
+  .mainhome .preview h1 {
+    text-align: center;
+    text-shadow: 1px 1px rgb(172, 172, 172);
+  }
+  .mainhome .preview h1 span {
+    color: var(--primary);
+  }
+  .mainhome .preview {
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .mainhome .preview .card-all {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .mainhome .preview .card-all .card-preview {
+    flex-wrap: wrap;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    box-shadow: 2px 2px 2px rgb(172, 172, 172);
+    justify-items: center;
+  }
+  .mainhome .preview .card-all a {
+    text-align: center;
+    text-decoration: none;
+    justify-items: center;
+  }
+  .mainhome .preview .card-all .card-preview img {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+  .mainhome .preview .card-all .card-preview img:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px rgb(172, 172, 172);
+    color: var(--primary);
+  }
+  .card-preview h3 {
+    color: #000;
+  }
+  .card-preview h3:hover {
+    color: var(--primary);
+  }
+  .container-footer {
+    grid-gap: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mainhome .container .rightside-airport {
+    width: 450px;
+  }
+  .mainhome .preview .card-all .card-preview img {
+    width: 300px;
+    height: 170px;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .mainhome .judul {
+    margin-top: 3%;
+  }
+  .mainhome .container .leftside-airport .card-besar {
+    width: 350px;
+    height: 250px;
+  }
+  .mainhome .container .leftside-airport .card-besar img {
+    width: 350px;
+    height: 250px;
+  }
+  .mainhome .container .leftside-airport .card-kecil .img-card img {
+    width: 100px;
+    height: 70px;
+  }
+  .mainhome .container .rightside-airport {
+    width: 270px;
+  }
+  .mainhome .preview .card-all .card-preview img {
+    width: 230px;
+    height: 140px;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+  .card-preview h3 {
+    font-size: 14px;
+  }
+  footer {
+    margin-top: 3%;
+  }
+}
+@media screen and (max-width: 428px) {
+  .mainhome {
+    display: grid;
+    margin-top: 19%;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+  }
+  .mainhome .judul {
+    display: flex;
+    justify-content: center;
+  }
+  .mainhome .judul a {
+    color: black;
+    margin: 0 2px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    font-weight: 550;
+  }
+  .mainhome .judul a:hover {
+    background-color: red;
+    color: white;
+  }
+  .mainhome .container {
+    display: grid;
+    color: black;
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+  .mainhome .container .leftside-airport {
+    margin: 0 20px;
+    width: 350px;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  .mainhome .container .leftside-airport .card-besar {
+    width: 350px;
+    height: 200px;
+  }
+  .mainhome .container .leftside-airport .card-besar img {
+    width: 350px;
+    height: 200px;
+  }
+  .mainhome .container .leftside-airport .card-kecil .img-card img {
+    width: 70px;
+    height: 50px;
+  }
+
+  .mainhome .container .rightside-airport {
+    margin-top: 3%;
+    width: 370px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+  .mainhome .container .rightside-airport .request {
+    width: 100px;
+  }
+  .mainhome .container .rightside-airport .download {
+    width: 100px;
+  }
+  .mainhome .container .rightside-airport .request a,
+  .mainhome .container .rightside-airport .download a {
+    font-size: 11px;
+  }
+  .mainhome .container .rightside-airport .link {
+    display: flex;
+    justify-content: center;
+  }
+  .mainhome .preview h1 {
+    text-align: center;
+    text-shadow: 1px 1px rgb(172, 172, 172);
+  }
+  .mainhome .preview h1 span {
+    color: var(--primary);
+  }
+  .mainhome .preview {
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .mainhome .preview .card-all {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .mainhome .preview .card-all .card-preview {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    box-shadow: 2px 2px 2px rgb(172, 172, 172);
+    justify-items: center;
+  }
+  .mainhome .preview .card-all a {
+    text-align: center;
+    text-decoration: none;
+    justify-items: center;
+  }
+  .mainhome .preview .card-all .card-preview img {
+    width: 110px;
+    height: 60px;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+  .mainhome .preview .card-all .card-preview img:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px rgb(172, 172, 172);
+    color: var(--primary);
+  }
+  .card-preview h3 {
+    font-size: 10px;
+    color: #000;
+  }
+  .card-preview h3:hover {
+    color: var(--primary);
+  }
+  footer {
+    display: grid;
+    justify-content: center;
+    border-top: 1px solid #000;
+  }
+  .container-footer {
+    display: inline-block;
+    justify-content: center;
+    color: #000;
+    margin: 3%;
+  }
+  .container-footer .address,
+  .container-footer .listmenu,
+  .container-footer .linkcepat,
+  .container-footer .established {
+    margin-bottom: 10px;
+  }
 }
