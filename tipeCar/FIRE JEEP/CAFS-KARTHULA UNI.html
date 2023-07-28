@@ -42,31 +42,33 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <a href="/home.html"
-        ><img src="/asset/logo/kajama-logo.webp" alt="kajama-logo"
-      /></a>
-      <div class="info">
-        <a
-          href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
-          ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867 4857
-        </a>
-        <a href="mailto:info@kajama.net"
-          ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
-        >
+      <div class="logo-navbar">
+        <a href="/home.html"
+          ><img src="/asset/logo/kajama-logo.webp" alt="kajama-logo"
+        /></a>
       </div>
-      <div class="navbar-nav">
-        <a class="home-nav" href="/home.html">Home</a>
-        <a class="about-nav" href="/Company-Profil.html">About Us</a>
-        <a class="product-nav" href="/Product.html">Product</a>
-        <a class="quality-nav" href="/Quality.html">Quality</a>
-        <a class="equipment-nav" href="/Equipment.html">Equipment</a>
-        <a class="video-nav" href="/Video.html">Video</a>
-        <a class="contact-nav" href="/Contact-Us.html">Contact Us</a>
-      </div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-navbar">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="home-nav" href="/home.html">Home</a></li>
+        <li><a class="about-nav" href="/Company-Profil.html">About Us</a></li>
+        <li><a class="product-nav-active" href="/Product.html">Product</a></li>
+        <li><a class="quality-nav" href="/Quality.html">Quality</a></li>
+        <li><a class="equipment-nav" href="/Equipment.html">Equipment</a></li>
+        <li><a class="video-nav" href="/Video.html">Video</a></li>
+        <li><a class="contact-nav" href="/Contact-Us.html">Contact Us</a></li>
+      </ul>
     </nav>
     <!-- Main Mobil -->
     <!-- Main Home -->
     <section class="mainhome">
+      <div class="judul">
+        <a href="/home.html">Home >></a>
+        <a href="/Product.html">Product >></a>
+        <a href="/tipeCar/Fire-Jeep.html">Fire Jeep</a>
+      </div>
       <div class="container">
         <div class="leftside-airport">
           <div class="card-besar">
@@ -115,11 +117,13 @@
             <h4>Spesification</h4>
             <p>Mobil ini di desain ....</p>
           </div>
-          <div class="request">
-            <a href=""><i class="fa-solid fa-phone"></i> REQUEST</a>
-          </div>
-          <div class="download">
-            <a href=""><i class="fa-solid fa-circle-down"></i> DOWNLOAD</a>
+          <div class="link">
+            <div class="request">
+              <a href=""><i class="fa-solid fa-phone"></i> REQUEST</a>
+            </div>
+            <div class="download">
+              <a href=""><i class="fa-solid fa-circle-down"></i> DOWNLOAD</a>
+            </div>
           </div>
         </div>
       </div>
@@ -174,29 +178,29 @@
         <div class="listmenu">
           <h2>KAJAMA FIRE</h2>
           <div class="menu">
-            <a href="home.html">Home</a>
-            <a href="Company-Profil.html">About Us</a>
-            <a href="Product.html">Product</a>
-            <a href="Quality.html">Quality</a>
-            <a href="Equipment.html">Equipment</a>
-            <a href="Video.html">Video</a>
-            <a href="Contact-Us.html">Contact Us</a>
+            <a href="/home.html">Home</a>
+            <a href="/Company-Profil.html">About Us</a>
+            <a href="/Product.html">Product</a>
+            <a href="/Quality.html">Quality</a>
+            <a href="/Equipment.html">Equipment</a>
+            <a href="/Video.html">Video</a>
+            <a href="/Contact-Us.html">Contact Us</a>
           </div>
         </div>
         <div class="listlink">
           <h2>QUICK LINK</h2>
           <div class="linkcepat">
-            <a href="Quality.html">Quality Product</a>
-            <a href="Video.html">Video</a>
-            <a href="sertifikat.html">Sertifikat</a>
+            <a href="/Quality.html">Quality Product</a>
+            <a href="/Video.html">Video</a>
+            <a href="/sertifikat.html">Sertifikat</a>
           </div>
         </div>
         <div class="established">
           <h2>ESTABLISHED</h2>
-          <img src="asset/ISO/iso2.webp" alt="" />
-          <img src="asset/ISO/iso8.webp" alt="" />
-          <img src="asset/ISO/iso11.webp" alt="" />
-          <img src="asset/logo/kajama-morita.webp" alt="" />
+          <img src="/asset/ISO/iso2.webp" alt="" />
+          <img src="/asset/ISO/iso8.webp" alt="" />
+          <img src="/asset/ISO/iso11.webp" alt="" />
+          <img src="/asset/logo/kajama-morita.webp" alt="" />
         </div>
       </div>
       <div class="social">
@@ -214,7 +218,7 @@
         ></a>
       </div>
     </footer>
-    <script src="js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
+    <script src="/js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
     <script src="js/CAFS-KARTHULA.js"></script>
   </body>
 </html>
