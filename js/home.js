@@ -1,22 +1,38 @@
 // slide
-var swiper1 = new Swiper(".slide-container-mobil", {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  loop: true,
-  grabCursor: "true",
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+var swiper1;
+function initSwiper1() {
+  swiper1 = new Swiper(".slide-container-mobil", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    centerSlide: true,
+    fade: true,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+  });
+}
+function updateSwiper1() {
+  if (window.matchMedia("(max-width: 428px)").matches) {
+    swiper1.params.slidesPerView = 2;
+  } else {
+    swiper1.params.slidesPerView = 3;
+  }
+  swiper1.update();
+}
+initSwiper1();
+window.addEventListener("resize", function () {
+  updateSwiper1();
 });
+updateSwiper1();
+
 // certif
 swiper2 = new Swiper(".slide-container-certif", {
   slidesPerView: 5,
@@ -92,7 +108,6 @@ const slideImage = () => {
   } else if (imageIndex < 0) {
     imageIndex = 6;
   }
-
   carousel.style.transform = `translate(-${imageIndex * 100}%)`;
 };
 const updateClick = (e) => {
