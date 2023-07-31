@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breathing Apparatus | Kajama Fire</title>
+
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="/style/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/equipment/APAR/apar.css" />
+
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <script src="https://kit.fontawesome.com/ff4f981f32.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-navbar">
+        <a href="/home.html"
+          ><img src="/asset/logo/kajama-logo.webp" alt="kajama-logo"
+        /></a>
+      </div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-navbar">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="home-nav" href="/home.html">Home</a></li>
+        <li><a class="about-nav" href="/Company-Profil.html">About Us</a></li>
+        <li><a class="product-nav-active" href="/Product.html">Product</a></li>
+        <li><a class="quality-nav" href="/Quality.html">Quality</a></li>
+        <li><a class="equipment-nav" href="/Equipment.html">Equipment</a></li>
+        <li><a class="video-nav" href="/Video.html">Video</a></li>
+        <li><a class="contact-nav" href="/Contact-Us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <!-- Main Mobil -->
+    <!-- Main Home -->
+    <section class="mainhome">
+      <div class="judul">
+        <a href="/home.html">Home >></a>
+        <a href="/Equipment.html">Equipment</a>
+      </div>
+      <div class="container">
+        <div class="leftside-airport">
+          <div class="card-besar">
+            <img id="img-change" src="/asset/equipment/breathing apparatus/1.webp" alt="" />
+          </div>
+          <div class="card-kecil">
+            <div class="img-card">
+              <img
+                id="img-1"
+                src="/asset/equipment/breathing apparatus/2.webp"
+                alt=""
+                onclick="changeImage(1)"
+                class="active"
+              />
+            </div>
+            <div class="img-card">
+              <img
+                id="img-2"
+                src="/asset/equipment/breathing apparatus/3.webp"
+                alt=""
+                onclick="changeImage(2)"
+              />
+            </div>
+            <div class="img-card">
+              <img
+                id="img-3"
+                src="/asset/equipment/breathing apparatus/4.png"
+                alt=""
+                onclick="changeImage(3)"
+              />
+            </div>
+            <div class="img-card">
+              <img
+                id="img-3"
+                src="/asset/equipment/breathing apparatus/1.webp"
+                alt=""
+                onclick="changeImage(4)"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="rightside-airport">
+          <h4>EQUIPMENT</h4>
+          <h1>Alat Pemadam Api Ringan</h1>
+          <div class="spesifikasi">
+            <h4>Spesification</h4>
+            <p>Alat ini di desain ....</p>
+          </div>
+          <div class="link">
+            <div class="request">
+              <a href=""><i class="fa-solid fa-phone"></i> REQUEST</a>
+            </div>
+            <div class="download">
+              <a href=""><i class="fa-solid fa-circle-down"></i> DOWNLOAD</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preview">
+        <h1>MORE <span>EQUIPMENT</span></h1>
+        <div class="card-all">
+          <a href="/equipment/fire blanket/fireblanket.html"
+            ><div class="card-preview">
+              <img src="/asset/equipment/fire blanket/1.webp" alt="" />
+              <h3>FIRE BLANKET</h3>
+            </div></a
+          >
+          <a href="/equipment/fire boots/fireboots.html"
+            ><div class="card-preview">
+              <img src="/asset/equipment/fireboots/1.webp" alt="" />
+              <h3>FIRE BOOTS</h3>
+            </div></a
+          >
+          <a href="/equipment/fire helmet/firehelmet.html"
+            ><div class="card-preview">
+              <img src="/asset/equipment/helmet/2.webp" alt="" />
+              <h3>FIRE HELMET</h3>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container-footer">
+        <div class="address">
+          <h2>ADDRESS</h2>
+          <div style="font-size: small">
+            <i class="fa-solid fa-location-dot"></i> PT. KARYA JAYA MANDIRI
+            MEGAH PRAKOSO<br />Jalan Raya, Bojong Nangka, Gunung Putri, Bogor
+            Regency, West Java 16962
+            <br />
+            <a
+              href="https://api.whatsapp.com/send?phone=6281214213030&text=Halo%20Bang!%0ASaya%20ingin%20order%20jasa%20Anda"
+              ><i class="fa-solid fa-phone"></i> 021-867 4210, 8686 4099, 867
+              4857 </a
+            ><br />
+            <a href="mailto:info@kajama.net"
+              ><i class="fa-regular fa-envelope"></i> info@kajama.net</a
+            >
+          </div>
+        </div>
+        <div class="listmenu">
+          <h2>KAJAMA FIRE</h2>
+          <div class="menu">
+            <a href="/home.html">Home</a>
+            <a href="/Company-Profil.html">About Us</a>
+            <a href="/Product.html">Product</a>
+            <a href="/Quality.html">Quality</a>
+            <a href="/Equipment.html">Equipment</a>
+            <a href="/Video.html">Video</a>
+            <a href="/Contact-Us.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="listlink">
+          <h2>QUICK LINK</h2>
+          <div class="linkcepat">
+            <a href="/Quality.html">Quality Product</a>
+            <a href="/Video.html">Video</a>
+            <a href="/sertifikat.html">Sertifikat</a>
+          </div>
+        </div>
+        <div class="established">
+          <h2>ESTABLISHED</h2>
+          <img src="/asset/ISO/iso2.webp" alt="" />
+          <img src="/asset/ISO/iso8.webp" alt="" />
+          <img src="/asset/ISO/iso11.webp" alt="" />
+          <img src="/asset/logo/kajama-morita.webp" alt="" />
+        </div>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com/paijo.doang.39"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.youtube.com/channel/UCuY7S43GxzswhTMe0_DalZA"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://www.instagram.com/cucukdokterpemadam/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/cucuk-kajama-026b32146/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="/js/cdn.jsdelivr.net_npm_swiper@10.0.4_swiper-bundle.min.js"></script>
+    <script src="/equipment/breathing apparatus/breathing.js"></script>
+  </body>
+</html>
